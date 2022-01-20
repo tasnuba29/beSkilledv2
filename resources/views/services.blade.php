@@ -46,7 +46,7 @@
         @foreach ($services as $service)
             <div class="col-lg-4 mb-3">
                     <div class="box" data-aos="fade-up" data-aos-delay="200" style="background: #258cf5;">
-                    <img src="{{ asset('course/images/'.$service -> image) }}" class="img-fluid" alt="">
+                    <img src="{{ asset('course/images/'.$service -> image) }}" class="img-fluid" alt="image">
                     <h3 >{{ $service -> course_title }}</h3>
 
                      <p>

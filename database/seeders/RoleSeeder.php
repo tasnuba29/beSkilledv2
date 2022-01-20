@@ -21,7 +21,7 @@ class RoleSeeder extends Seeder
 
             [
                 'name' => 'Admin',
-                'email' => 'admin@abasas.tech',
+                'email' => 'admin@beskilled.com',
                 'password' => Hash::make(1234),
             ],
             [
@@ -31,17 +31,17 @@ class RoleSeeder extends Seeder
             ],
             [
                 'name' => 'student',
-                'email' => 'student@abasas.tech',
+                'email' => 'student@beskilled.com',
                 'password' => Hash::make(1234),
             ],
             [
                 'name' => 'trainer',
-                'email' => 'trainer@abasas.tech',
+                'email' => 'trainer@beskilled.com',
                 'password' => Hash::make(1234),
             ],
             [
                 'name' => 'freelancer',
-                'email' => 'freelancer@abasas.tech',
+                'email' => 'freelancer@beskilled.com',
                 'password' => Hash::make(1234),
             ]
         ]);

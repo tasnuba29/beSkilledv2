@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>skillmaker</title>
+  <title>BeSkilled</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -43,15 +43,15 @@
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
     <div class="container d-flex">
       <div class="contact-info mr-auto">
-        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">{{App\Models\additionalSetting::find(16)->key }}</a>
+        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">{{App\Models\additionalSetting::find(10)->key }}</a>
+        <i class="icofont-phone"></i> {{App\Models\additionalSetting::find(11)->key }}
         <i class="icofont-phone"></i> {{App\Models\additionalSetting::find(12)->key }}
-        <i class="icofont-phone"></i> {{App\Models\additionalSetting::find(13)->key }}
-        <i class="icofont-google-map"></i> {{App\Models\additionalSetting::find(15)->key }}
+        <i class="icofont-google-map"></i> {{App\Models\additionalSetting::find(13)->key }}
       </div>
       <div class="social-links">
-        <a href="{{App\Models\additionalSetting::find(9)->key }}" class="facebook"><i class="icofont-facebook"></i> </a>
-        <a href="{{App\Models\additionalSetting::find(10)->key   }}" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="{{App\Models\additionalSetting::find(11)->key  }}" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+        <a href="{{App\Models\additionalSetting::find(14)->key }}" class="facebook"><i class="icofont-facebook"></i> </a>
+        <a href="{{App\Models\additionalSetting::find(15)->key   }}" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="{{App\Models\additionalSetting::find(16)->key  }}" class="linkedin"><i class="icofont-linkedin"></i></i></a>
       </div>
     </div>
   </div>
@@ -61,7 +61,7 @@
     <div class="container d-flex align-items-center">
       <!-- <h1 class="logo mr-auto"><a href="index.html">Medilab</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="{{ url('/') }}" class="logo mr-auto"><img src="{{asset('images/skillmaker.png')}}" alt="" class="img-fluid"></a>
+      <a href="{{ url('/') }}" class="logo mr-auto"><img src="{{asset('images/bbs.png')}}" alt="" class="img-fluid"></a>
 
       @include('includes.nav')
 
@@ -131,7 +131,7 @@
         "position": "right"
       },
       "brandSetting": {
-        "brandName": "skillmaker",
+        "brandName": "BeSkilled",
         "brandSubTitle": "Typically replies within an Hour",
         "brandImg": "",
         "welcomeText": "Hi there!\nHow can I help you?",
@@ -140,7 +140,7 @@
         "ctaText": "Start Chat",
         "borderRadius": "25",
         "autoShow": false,
-        "phoneNumber": "+8801974775455"
+        "phoneNumber": "+88017xxxxxxx"
       }
     };
     s.onload = function() {

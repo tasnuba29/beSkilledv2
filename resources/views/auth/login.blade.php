@@ -2,7 +2,7 @@
     <x-jet-authentication-card>
         <x-slot name="logo">
             
-           <a href="{{ url('/') }}" class="logo mr-auto"><img src="{{asset('images/skillmaker-removebg-.png')}}" alt="" class="img-fluid" width="270px"></a>
+           <a href="{{ url('/') }}" class="logo mr-auto"><img src="{{asset('images/BeSkilled-removebg-.png')}}" alt="" class="img-fluid" width="270px"></a>
 
 
         </x-slot>
@@ -47,7 +47,7 @@
                 </x-jet-button>
               
             </div>
-            <div class="text-dark font-italic">     <a href="{{route('register')}}">Create Accout</a> </div>
+            <div class="text-dark font-italic">     <a href="{{route('register')}}">Create Account</a> </div>
             
         </form>
     </x-jet-authentication-card>

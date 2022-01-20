@@ -105,7 +105,7 @@
                         </div>
                         <div class="body">
                             <div class="detail-box d-flex align-items-center justify-content-between">
-                                <span>Form</span>
+                                <span>From</span>
                                 <strong>{{ $freelancer -> location }}</strong>
                             </div>
                             <div class="detail-box d-flex align-items-center justify-content-between">

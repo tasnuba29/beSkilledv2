@@ -5,10 +5,10 @@
       <div class="row">
         <div class="col-12 col-md-6">
           <div class="footer_logo">
-
+<!--
             <a href="">
-              <img src="{{ asset('images/skillmaker-removebg-.png') }}" alt="">
-            </a>
+              <img src="{{ asset('/') }}" alt="logo">
+            </a>-->
           </div>
 
 
@@ -35,15 +35,15 @@
           <div class="social-links pt-4">
             <div class="row">
               <div class="col-2">  </div>
-              <div class="col-2"> <a href="{{App\Models\additionalSetting::find(9)->key }}" class="facebook"><i class="bx bxl-facebook"></i></a></div> 
+              <div class="col-2"> <a href="{{App\Models\additionalSetting::find(14)->key }}" class="facebook"><i class="bx bxl-facebook"></i></a></div> 
               
-              <div class="col-2"> <a href="{{App\Models\additionalSetting::find(10)->key }}" class="instagram"><i class="bx bxl-instagram"></i></a> </div>
-              <div class="col-2"> <a href="{{App\Models\additionalSetting::find(11)->key }}" class="linkedin"><i class="bx bxl-linkedin"></i></a> </div>
+              <div class="col-2"> <a href="{{App\Models\additionalSetting::find(15)->key }}" class="instagram"><i class="bx bxl-instagram"></i></a> </div>
+              <div class="col-2"> <a href="{{App\Models\additionalSetting::find(16)->key }}" class="linkedin"><i class="bx bxl-linkedin"></i></a> </div>
               <div class="col-2">  </div>
             </div>
 
 <p class="  m-4 text-right font-weight-bold">
-  E-mail : {{App\Models\additionalSetting::find(16)->key  }}<br>
+  E-mail : {{App\Models\additionalSetting::find(10)->key  }}<br>
   WhatsApp : {{App\Models\additionalSetting::find(17)->key  }}
 </p>
 
@@ -93,7 +93,7 @@
             <img src="{{ asset(App\Models\additionalImage::find(1)->link }}" alt="">
           </a>
           <p>
-            We at Skillmaker aim to create 2 Million Employment Opportunities by year 2023 in pakistan.
+            We at BeSkilled aim to create 2 Million Employment Opportunities by year 2023 in pakistan.
           </p>
           <div class="social-links pt-4">
             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -147,7 +147,7 @@
   <div class="container py-4">
     <div class="text-center">
       <div class="copyright">
-        <p>&copy; Copyright <strong><span>skillmaker</span></strong>. All Rights Reserved</p>
+        <p>&copy; Copyright <strong><span>BeSkilled</span></strong>. All Rights Reserved</p>
       </div>
     </div>
   </div>

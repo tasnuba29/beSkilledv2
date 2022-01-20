@@ -61,7 +61,7 @@ class PerticipatorController extends Controller
             'country.required'      => 'Please Enter Country Name',
             'occopation.required'   => 'Please Enter Your Occopation',
             'training.required'     => 'Please Enter Trainig Name',
-            'enablers.required'     => 'Please Enter Skillmaker from',
+            'enablers.required'     => 'Please Enter BeSkilled from',
             'payment_type.required' => 'Please Select Payment Type'
 
         ]);
@@ -104,7 +104,7 @@ class PerticipatorController extends Controller
     public function edit(perticipator $perticipator)
     {
         // return $perticipator;
-        $page_name = 'Perticiper Details Update';
+        $page_name = 'Participator Details Update';
         return view('admin.perticipators.edit', compact('page_name','perticipator'));
     }
 

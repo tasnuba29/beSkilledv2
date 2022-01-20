@@ -3,7 +3,7 @@
 @section('css')
 <style>
   #hero{
-    background: url("{{asset('theme/frontend/assets/img/skill-e-3.jpg')}}") center center ;
+    background: url("{{asset('theme/frontend/assets/img/bg2.png')}}") center center ;
     margin-top:100px;
     background-repeat: no-repeat;
   }
@@ -74,7 +74,7 @@
               <div class="icon-box mt-4 mt-xl-0">
                 <a href="">
                     <i class="bx bx-cube-alt"></i>
-                    <h4>Seller Deshboard</h4>
+                    <h4>Training Related Concern</h4>
                     <p>{{App\Models\additionalSetting::find(3)->value }}</p>
                     </a>
               </div>
@@ -83,7 +83,7 @@
               <div class="icon-box mt-4 mt-xl-0">
                <a href="">
                 <i class="bx bx-images"></i>
-                <h4>Investment Group</h4>
+                <h4>Payment Related Concern</h4>
                 <p>{{App\Models\additionalSetting::find(4)->value }}</p>
                </a>
               </div>
@@ -103,7 +103,7 @@
 
   <header class="section-header2">
       <!-- <h2>Our Values</h2> -->
-      <p class="section--header">skillmaker Trainings</p>
+      <p class="section--header">BeSkilled Trainings</p>
       </header>
       <p class="text-dark text-center " style="font-size: 120%;"> {{App\Models\additionalSetting::find(5)->value }}</p>
 
@@ -138,8 +138,8 @@
   <div class="container" data-aos="fade-up">
 
     <header class="section-header2">
-      <!-- <h2>skillmaker Services</h2> -->
-      <p class="section--header">skillmaker Services</p>
+      <!-- <h2>BeSkilled Services</h2> -->
+      <p class="section--header">BeSkilled Services</p>
   </header>
   <p class="text-dark text-center " style="font-size: 120%;">{{App\Models\additionalSetting::find(6)->value }}</p>
 

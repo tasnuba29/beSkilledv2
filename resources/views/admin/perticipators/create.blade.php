@@ -3,7 +3,7 @@
     <div class="nk-content-body">
         <div class="card">
             <div class="card-header">
-                <h5>{{ $page_name }} <a href="{{ route('perticipators.index') }}" class="float-right btn btn-primary text-white"> <i class="fas fa-edit"></i> <span class="ml-2">Manage Perticiper</span></a></h5>
+                <h5>{{ $page_name }} <a href="{{ route('perticipators.index') }}" class="float-right btn btn-primary text-white"> <i class="fas fa-edit"></i> <span class="ml-2">Manage Participator</span></a></h5>
             </div>
             <div class="card-body">
                 @if($message = Session::get('success'))
@@ -80,7 +80,7 @@
                                 @endif
                             </div>
                             <div class="form-group col-md-6 float-left">
-                                <label class="form-label"> Where from you heard about Skillmaker ?<sup class="text-danger">*</sup></label>
+                                <label class="form-label"> Where from you heard about BeSkilled ?<sup class="text-danger">*</sup></label>
                                <select class="form-control" name="enablers">
                                    <option>----------Select One-------</option>
                                    <option value="Social Media">Social Media</option>
