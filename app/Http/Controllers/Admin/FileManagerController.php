@@ -1,11 +1,12 @@
 <?php 
 
-use App\Models\fileManager;
 namespace App\Http\Controllers\Admin;
+use App\Models\fileManager;
 
 use App\Http\Controllers\Controller;
-use App\Models\fileManager;
+ 
 use Illuminate\Http\Request;
+
 
 use \App\Http\Requests\StorefileManagerRequest;
 
