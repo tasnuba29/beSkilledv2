@@ -49,9 +49,28 @@
         <i class="icofont-google-map"></i> {{App\Models\additionalSetting::find(13)->key }}
       </div>
       <div class="social-links">
-        <a href="{{App\Models\additionalSetting::find(14)->key }}" class="facebook"><i class="icofont-facebook"></i> </a>
+        {{-- <a href="{{App\Models\additionalSetting::find(14)->key }}" class="facebook"><i class="icofont-facebook"></i> </a>
         <a href="{{App\Models\additionalSetting::find(15)->key   }}" class="instagram"><i class="icofont-instagram"></i></a>
         <a href="{{App\Models\additionalSetting::find(16)->key  }}" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+       --}}
+      
+     
+          @if (Auth::check())
+          <a href="{{route('login')}}"  >
+          My Account
+          </a>
+          @else
+          <a href="{{route('login')}}" >
+            Login
+            </a>
+            <a href="{{route('register')}}"  >
+              Register
+              </a>
+          @endif 
+  
+  
+        </a>
+      
       </div>
     </div>
   </div>
