@@ -33,6 +33,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 // redirection route after login 
+Route::get('rr', function () {
+    return Hash::make('12345678');
+});
 
 Route::get('redirection', function () {
 
