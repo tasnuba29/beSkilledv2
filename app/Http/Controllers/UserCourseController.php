@@ -105,5 +105,38 @@ class UserCourseController extends Controller
   
     
 
+
+
+
+
+    public function adminAccountUpdate(Request $request){
+        // return $request;
+
+        $user =  Auth::user();
+        $user->name =  $request->name;
+        $user->email =  $request->email;
+      
+
+        
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $fileName = time() . '.' . $extension;
+            $file->move('images/', $fileName);
+            $user->profile_photo_path = $fileName;
+        } 
+        $user->save();
+
+
+
+     
+
+        
+        return back();
+    }
+  
+
+
+
     
 }
