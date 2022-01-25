@@ -16,11 +16,11 @@
                     <div class="nk-sidebar-content">
                         <div class="nk-sidebar-menu" data-simplebar>
                             <ul class="nk-menu">
-                            <li class="nk-menu-item has-sub">
-                                <a href="#" class="nk-menu-link nk-menu-toggle">
+                              <li class="nk-menu-item has-sub">
+                               <a href="#" class="nk-menu-link nk-menu-toggle">
                                     <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
                                     <span class="nk-menu-text"> Services</span>
-                                </a>
+                                </a> 
                                 <ul class="nk-menu-sub">
                                     <li class="nk-menu-item">
                                         <a href="{{ route('users.services') }}" class="nk-menu-link"><span class="nk-menu-text"> My Services List</span></a>

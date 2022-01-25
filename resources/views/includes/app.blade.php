@@ -43,10 +43,11 @@
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
     <div class="container d-flex">
       <div class="contact-info mr-auto">
-        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">{{App\Models\additionalSetting::find(10)->key }}</a>
-        <i class="icofont-phone"></i> {{App\Models\additionalSetting::find(11)->key }}
-        <i class="icofont-phone"></i> {{App\Models\additionalSetting::find(12)->key }}
+       {{-- <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">{{App\Models\additionalSetting::find(10)->key }}</a>
+      <i class="icofont-phone"></i>{{App\Models\additionalSetting::find(11)->key 
+      <iclass="icofont-phone"></i>App\Models\additionalSetting::find(12)->key }} 
         <i class="icofont-google-map"></i> {{App\Models\additionalSetting::find(13)->key }}
+        }}--}}
       </div>
       <div class="social-links">
         {{-- <a href="{{App\Models\additionalSetting::find(14)->key }}" class="facebook"><i class="icofont-facebook"></i> </a>
@@ -56,20 +57,14 @@
       
      
           @if (Auth::check())
-          <a href="{{route('login')}}"  >
-          My Account
-          </a>
+         <a href="{{route('login')}}"> My Account </a>
           @else
-          <a href="{{route('login')}}" >
-            Login
-            </a>
-            <a href="{{route('register')}}"  >
-              Register
-              </a>
+         <a href="{{route('login')}}" >Login</a>
+          <a href="{{route('register')}}">Register</a>
           @endif 
   
   
-        </a>
+        <!--</a>-->
       
       </div>
     </div>
@@ -84,7 +79,7 @@
 
       @include('includes.nav')
 
-      <a href="{{route('login')}}" class="appointment-btn scrollto">
+     {{--   <a href="rout} }}e('login')}}" class="appointment-btn scrollto">
         @if (Auth::check())
         My Account
         @else
@@ -93,7 +88,7 @@
 
 
       </a>
-
+--}}
     </div>
   </header><!-- End Header -->
 

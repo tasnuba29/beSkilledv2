@@ -1,4 +1,4 @@
-<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 " style="background-image:url({{asset('images/login-bg.jpeg')}} );    background-repeat: no-repeat;
+<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 " style="background-image:url({{asset('images/color.png')}} );    background-repeat: no-repeat;
 background-size: cover;
 background-position: center center;">
     <div>

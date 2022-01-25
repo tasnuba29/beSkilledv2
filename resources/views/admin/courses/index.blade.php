@@ -19,7 +19,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Course Title</th>
-                               <th>Type</th>  
+                               <th>Type</th> 
                                 <th>Price</th>
                                 <th>Serial</th>
                                 <!-- <th>Image</th> -->
@@ -33,7 +33,7 @@
                                 <tr>
                                     <td>{{ ++$i }}</td>
                                     <td>{{ $course->course_title }}</td>
-                                    <td>{{ $course->type }}</td>
+                                    <td>{{ $course->type }}</td> 
                                     <td>{{ $course->price }}</td>
                                     <td>{{ $course->serial }}</td>
                                     {{--
