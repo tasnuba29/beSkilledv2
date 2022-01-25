@@ -17,6 +17,7 @@ use App\Http\Controllers\SupportController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\UserCourseController;
 use App\Http\Controllers\VideoPlayerController;
+use App\Models\perticipator;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -50,11 +51,27 @@ Route::get('redirection', function () {
         return redirect(route('trainer.index'));
     } else if ($user->hasRole('student')) {
         // return "he is already a student";
+
+          // return "add as student successfull";
+          $perticipator =  perticipator::where('user_id',Auth::user()->id)->first();
+          if(is_null($perticipator)){
+              $perticipator = new perticipator();
+              $perticipator->user_id=Auth::user()->id;
+              $perticipator->save();
+          }
+  
+          
         return redirect(route('users.index'));
     } else {
         $user->assignRole('student');
+   // return "add as student successfull";
+   $perticipator =  perticipator::where('user_id',Auth::user()->id)->first();
+   if(is_null($perticipator)){
+       $perticipator = new perticipator();
+       $perticipator->user_id=Auth::user()->id;
+       $perticipator->save();
+   }
 
-        // return "add as student successfull";
         return redirect(route('users.index'));
     }
 })->middleware('auth')->name('redirection');
@@ -77,6 +94,8 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth'], 'as' => 'users.'], f
     Route::get('services', [UserCourseController::class, 'services'])->name('services');
     Route::get('trainings', [UserCourseController::class, 'trainings'])->name('trainings');
     Route::post('account-update', [UserCourseController::class, 'accountUpdate'])->name('account.update');
+    Route::post('account-password-update', [UserCourseController::class, 'passwordUpdate'])->name('account.password');
+    
 });
 
 Route::group(['prefix' => 'trainer', 'middleware' => ['auth'], 'as' => 'trainer.'], function () {
