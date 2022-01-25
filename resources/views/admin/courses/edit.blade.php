@@ -34,7 +34,7 @@
                                     <span class="text-danger ">{{ $errors->first('price') }}</span>
                                 @endif
                             </div>
-                            <div class="form-group col-md-6 float-left">
+                           {{-- <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Course Type<sup class="text-danger">*</sup></label>
                                 <select class="form-select form-select-sm" value="{{$course->type}}" name="type" data-search="off" > 
                               
@@ -57,7 +57,7 @@
                                 @else  
                                 <option value="seminar">Seminar </option>
                                 @endif 
-                               </select>
+                               </select> --}}
                                 
                             </div>
                             <div class="form-group col-md-6 float-left">

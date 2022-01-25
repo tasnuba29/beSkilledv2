@@ -47,11 +47,11 @@
                                 <label class="form-label"> Course Type<sup class="text-danger">*</sup></label>
                                 <select class="form-select form-select-sm" name="type" data-search="off" data-placeholder="Training"> 
                                                                     <option value="training">Training</option>
-                                                                    <option value="service">Service </option>
-                                                                    <option value="seminar">Seminar</option>
+                                                                    {{--  <option value="service">Service </option>
+                                                                    <option value="seminar">Seminar</option>--}}
                                </select>
                                 
-                            </div>
+                            </div> 
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label">Course Image<sup class="text-danger">*</sup></label>
                                 <input type="file"  name="image" class="form-control">

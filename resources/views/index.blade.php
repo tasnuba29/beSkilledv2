@@ -103,7 +103,7 @@
 
   <header class="section-header2">
       <!-- <h2>Our Values</h2> -->
-      <p class="section--header">BeSkilled Trainings</p>
+      <p class="section--header">BeSkilled Cources</p>
       </header>
       <p class="text-dark text-center " style="font-size: 120%;"> {{App\Models\additionalSetting::find(5)->value }}</p>
 
@@ -121,6 +121,8 @@
                 </p>
                 <button type="button" class="btn btn-primary "><a class="text-light" href="{{route('singleTrainings',$training ->id)}}">Join</a></button>
             </div>
+            <!--more-->
+            
         </div>
       @endforeach
 
@@ -133,7 +135,7 @@
 
 
 <!-- ======= services Section ======= -->
-<section id="values" class="values2">
+   <section id="values" class="values2">
 
   <div class="container" data-aos="fade-up">
 
@@ -168,7 +170,6 @@
   </div>
 
 </section><!-- End services Section -->
-
 
 
 

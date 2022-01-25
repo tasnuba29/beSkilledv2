@@ -26,9 +26,9 @@
           <div class="row mt-4">
             <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">ABOUT US</a></div>
             <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">CAREER</a></div>
-            <div class="col-6"><a href="{{route('trainings')}}" class="appointment-btn m-2">COURSES</a></div>
+           <!-- <div class="col-6"><a href="{{route('trainings')}}" class="appointment-btn m-2">COURSES</a></div>-->
             <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">FIND US ON MAP</a></div>
-            <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">SERVICES</a></div>
+           <!-- <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">SERVICES</a></div>-->
             <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">CONTACT DETAILS</a></div>
           </div>
 
@@ -134,7 +134,7 @@
         <div class="col-lg-3 col-md-6 footer-contact2">
           <h4>Contact Us</h4>
           <p>We Would Love To Talk To You.</p>
-          <p class="phone">+9242 - 111 123 111</p>
+          <p class="phone">11 123 111</p>
           <a href="">Contact Support</a>
           <p>9 AM to 6 PM (Mon-Fri)</p>
           <p>9 AM to 1 PM (Sat)</p>

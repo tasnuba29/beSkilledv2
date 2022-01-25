@@ -9,7 +9,8 @@
         </div>
 
         <x-jet-validation-errors class="mb-4" />
-
+        <a href="{{ url('/') }}" class="logo mr-auto"><img src="{{asset('images/bbs.png')}}" alt="" class="img-fluid" width="270px" style="margin: 0 auto;
+            padding: 50px;"></a>
         <form method="POST" action="{{ route('password.confirm') }}">
             @csrf
 

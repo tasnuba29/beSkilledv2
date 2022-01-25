@@ -23,10 +23,11 @@ $navServices = App\Models\course::where('type','service')->orderBy('serial')->ge
                 <li>
                     <div class=" row megha-menu">
                 <div class="col-md-6">
+
                     <a href="{{route('services')}}" style=" font-weight: bold; text-transform: uppercase">
                         <i class="fas fa-link" style="margin-right: 5px;"></i>
                         Services
-                    </a>
+                    </a> 
                     <div class="megha-item">
    
                         @foreach($navServices as $navService)
@@ -36,12 +37,14 @@ $navServices = App\Models\course::where('type','service')->orderBy('serial')->ge
                         <a href="{{route('services')}}" class="font-weight-bold font-italic">More >> </a>
                     </div>
                 </div>
+                
 
                 <div class="col-md-4">
+
                     <a href="{{route('trainings')}}" style=" font-weight: bold; text-transform: uppercase">
                         <i class="fas fa-link" style="margin-right: 5px;"></i>
                         Trainings
-                    </a>
+                    </a> 
                     <div class="megha-item">
                     
                     @foreach($navTrainngs as $navTrainng)

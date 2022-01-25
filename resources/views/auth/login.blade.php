@@ -2,13 +2,15 @@
     <x-jet-authentication-card>
         <x-slot name="logo">
             
-           <a href="{{ url('/') }}" class="logo mr-auto"><img src="{{asset('images/BeSkilled-removebg-.png')}}" alt="" class="img-fluid" width="270px"></a>
+           {{-- <a href="{{ url('/') }}" class="logo mr-auto"><img src="{{asset('images/bbs.png')}}" alt="" class="img-fluid" width="270px"></a> --}}
 
 
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
-
+        <a href="{{ url('/') }}" class="logo mr-auto"><img src="{{asset('images/bbs.png')}}" alt="" class="img-fluid" width="270px" style="margin: 0 auto;
+            padding: 50px;"></a>
+ 
         @if (session('status'))
             <div class="mb-4 font-medium text-sm text-green-600">
                 {{ session('status') }}

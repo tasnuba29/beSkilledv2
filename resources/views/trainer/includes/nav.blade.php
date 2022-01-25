@@ -52,7 +52,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                           {{-- <div class="dropdown-inner">
+                                           <div class="dropdown-inner">
+                                                <ul class="link-list">
+                                                    <li><a href="{{route('profile.show')}}"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
+                                                  </ul>
+                                            </div>
+                                             
+
+                                                 {{-- <div class="dropdown-inner">
                                                 <ul class="link-list">
                                                     <li><a href=""><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
                                                     <li><a href="html/user-profile-setting.html"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
@@ -61,6 +68,7 @@
                                                 </ul>
                                             </div>
                                             --}}
+
                                             <div class="dropdown-inner">
                                                 
                                             <ul class="link-list">
