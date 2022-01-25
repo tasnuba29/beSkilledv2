@@ -66,17 +66,17 @@ Route::get('redirection', function () {
 
 
 Route::group(['prefix' => 'user', 'middleware' => ['auth'], 'as' => 'users.'], function () {
-    Route::get('/', function () {
-        return view('user.index');
-    })->name('index');
+    
 
 
+    Route::get('/', [UserCourseController::class, 'index'])->name('index');
 
     Route::resource('enrolls', EnrollController::class);
     Route::resource('seminars', UserSeminarController::class);
 
     Route::get('services', [UserCourseController::class, 'services'])->name('services');
     Route::get('trainings', [UserCourseController::class, 'trainings'])->name('trainings');
+    Route::post('account-update', [UserCourseController::class, 'accountUpdate'])->name('account.update');
 });
 
 Route::group(['prefix' => 'trainer', 'middleware' => ['auth'], 'as' => 'trainer.'], function () {
