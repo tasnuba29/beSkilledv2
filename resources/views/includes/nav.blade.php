@@ -19,11 +19,12 @@ $navServices = App\Models\course::where('type','service')->orderBy('serial')->ge
         </li>
 
         <li class="drop-down {{ (request()-> is('services')) ? 'active' : '' }}"><a>We Provide</a>
-            <ul class="megha-menu-ul"">
+            <ul class="megha-menu-ul">
                 <li>
                     <div class=" row megha-menu">
                 <div class="col-md-6">
-                       <a href="route('services')}}"" style=" font-weight: bold; text-transform: uppercase">
+
+                    <a href="{{route('services')}}" style=" font-weight: bold; text-transform: uppercase">
                         <i class="fas fa-link" style="margin-right: 5px;"></i>
                         Services
                     </a> 
@@ -39,7 +40,8 @@ $navServices = App\Models\course::where('type','service')->orderBy('serial')->ge
                 
 
                 <div class="col-md-4">
-                   <a href="route(' trainings')}}"" style=" font-weight: bold; text-transform: uppercase">
+
+                    <a href="{{route('trainings')}}" style=" font-weight: bold; text-transform: uppercase">
                         <i class="fas fa-link" style="margin-right: 5px;"></i>
                         Trainings
                     </a> 
@@ -53,7 +55,7 @@ $navServices = App\Models\course::where('type','service')->orderBy('serial')->ge
 
                     @endforeach
 
-                        <a href="{{route('trainings')}}"" class=" font-weight-bold font-italic">More >> </a>
+                        <a href="{{route('trainings')}}" class=" font-weight-bold font-italic">More >> </a>
                     </div>
                 </div>
 
