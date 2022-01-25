@@ -108,6 +108,12 @@ Route::group(['prefix' => 'trainer', 'middleware' => ['auth'], 'as' => 'trainer.
 
 
 
+Route::post('account-update', [UserCourseController::class, 'adminAccountUpdate'])->name('admin.account.update');
+  
+
+
+
+
 
 
 
