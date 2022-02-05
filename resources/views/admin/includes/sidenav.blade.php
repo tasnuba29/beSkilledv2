@@ -5,12 +5,12 @@
                         <a href="#" class="nk-nav-toggle nk-quick-nav-icon d-xl-none" data-target="sidebarMenu"><em class="icon ni ni-arrow-left"></em></a>
                         <a href="#" class="nk-nav-compact nk-quick-nav-icon d-none d-xl-inline-flex" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
                     </div>
-                    <div class="nk-sidebar-brand">
-                        <a href="html/index.html" class="logo-link nk-sidebar-logo">
-                            <img class="logo-light logo-img" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
-                            <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                    <div class="nk-sidebar-brand"> 
+                        <a href="{{ url('/login') }}" class="logo-link nk-sidebar-logo">
+                            <img class="logo-light logo-img" src="{{asset('images/bbs.png')}}" srcset="./images/logo2x.png 2x" alt="logo">
+                            <img class="logo-dark logo-img" src="{{asset('images/bbs.png')}}" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
                         </a>
-                    </div>
+                    </div> 
                 </div><!-- .nk-sidebar-element -->
                 <div class="nk-sidebar-element nk-sidebar-body">
                     <div class="nk-sidebar-content">
@@ -165,7 +165,7 @@
 
                                     </ul>
                                 </li>
-                               
+                                {{---
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
@@ -181,6 +181,8 @@
 
                                     </ul>
                                 </li>
+
+                                --}}
 
 {{--
                                 <li class="nk-menu-item has-sub">

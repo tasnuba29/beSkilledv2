@@ -45,27 +45,32 @@
                                     <span class="text-danger ">{{ $errors->first('email') }}</span>
                                 @endif
                             </div>
-                            <div class="form-group col-md-6 float-left">
+
+                            <!-- <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Passport Number<sup class="text-danger">*</sup></label>
                                 <input type="text" name="pasport" placeholder="Enter Passport Number"  class="form-control" value="{{ $perticipator->pasport }}">
                                 @if($errors->has('pasport'))
                                     <span class="text-danger ">{{ $errors->first('pasport') }}</span>
                                 @endif
-                            </div>
-                            <div class="form-group col-md-6 float-left">
+                            </div> -->
+
+                            <!-- <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> City<sup class="text-danger">*</sup></label>
                                 <input type="text" name="city" placeholder="Enter City Name"  class="form-control" value="{{ $perticipator->city }}">
                                 @if($errors->has('city'))
                                     <span class="text-danger ">{{ $errors->first('city') }}</span>
                                 @endif
-                            </div>
-                            <div class="form-group col-md-6 float-left">
+                            </div> -->
+
+
+
+                            <!-- <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Country<sup class="text-danger">*</sup></label>
                                 <input type="text" name="country" placeholder="Enter Country Name"  class="form-control" value="{{ $perticipator->country }}">
                                 @if($errors->has('country'))
                                     <span class="text-danger ">{{ $errors->first('country') }}</span>
                                 @endif
-                            </div>
+                            </div> -->
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Occupation<sup class="text-danger">*</sup></label>
                                 <input type="text" name="occopation" placeholder="Enter Occupation"  class="form-control" value="{{ $perticipator->occopation }}">
@@ -73,14 +78,14 @@
                                     <span class="text-danger ">{{ $errors->first('occopation') }}</span>
                                 @endif
                             </div>
-                            <div class="form-group col-md-6 float-left">
+                            <!-- <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Training<sup class="text-danger">*</sup></label>
                                 <input type="text" name="training" placeholder="Enter Training"  class="form-control" value="{{ $perticipator->training }}">
                                 @if($errors->has('training'))
                                     <span class="text-danger ">{{ $errors->first('training') }}</span>
                                 @endif
-                            </div>
-                            <div class="form-group col-md-6 float-left">
+                            </div> -->
+                            <!-- <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Where from you heard about BeSkilled ?<sup class="text-danger">*</sup></label>
                                <select class="form-control" name="enablers">
                                    <option>----------Select One-------</option>
@@ -92,8 +97,8 @@
                                 @if($errors->has('enablers'))
                                     <span class="text-danger ">{{ $errors->first('enablers') }}</span>
                                 @endif
-                            </div>
-                            <div class="form-group col-md-6 float-left">
+                            </div> -->
+                            <!-- <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Occupation<sup class="text-danger">*</sup></label>
                                 <select name="payment_type" class="form-control">
                                     <option>--------Select One---------</option>
@@ -101,7 +106,7 @@
                                     <option value="Online Payment Getway">Online Payment Getway</option>
                                 </select>
                             
-                            </div>
+                            </div> -->
                             
                             <div class="form-group col-md-6 float-left">
                                 <label class="p-3"></label>

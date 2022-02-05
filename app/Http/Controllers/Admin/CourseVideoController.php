@@ -114,14 +114,13 @@ class CourseVideoController extends Controller
     {
         $this->validate($request,[
             'video_title' => 'required',
-            'video_link' => 'required|mimes:mp4,3gp,mkv |max:20048',
+            'video_link' => 'required|mimes:mp4,3gp,mkv',
             'chapter_id'    => 'required',
             'position'   => 'required'
         ],[
             'video_title.required'=> 'Please Enter Video Title',
             'video_link.required' => 'Please Select A Video',
             'video_link.mimes'    => 'Please Select mp4,3gp,mkv file',
-            'video_link.max'      => 'Please Select Image Less Then 20 Mb',
             'chapter.required'    => 'Please Enter course Chapter',
             'position.required'   => 'Please Enter Video Position'
         ]);

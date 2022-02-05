@@ -22,7 +22,7 @@
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Father Name</th>
-                                <th>More</th>
+                                <!-- <th>More</th> -->
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -34,9 +34,9 @@
                                     <td>{{ $perticipators->email }}</td>
                                     <td>{{ $perticipators->number }}</td>
                                     <td>{{ $perticipators->father_name }}</td>
-                                    <td>
+                                    <!-- <td>
                                         <a href="{{ route('perticipators.show', $perticipators->id) }}" class="btn btn-success">View</a> 
-                                    </td>
+                                    </td> -->
                                     <td>
                                         <form action="{{ route('perticipators.destroy', $perticipators->id) }}" method="post">
                                             <a href="{{ route('perticipators.edit', $perticipators->id) }}" class="btn btn-primary">Edit</a> |
