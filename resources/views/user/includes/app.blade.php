@@ -16,6 +16,11 @@
     <link id="skin-default" rel="stylesheet" href="{{asset('theme/admin/assets/css/theme.css?ver=2.4.0')}}">
     <link rel="stylesheet" href="{{asset('theme/admin/assets/css/editors/summernote.css?ver=2.4.0')}}">
     <link rel="stylesheet" href="{{ asset('theme/admin/assets/css/libs/fontawesome-icons.css?ver=2.4.0') }}">
+
+    
+  <link href="http://vjs.zencdn.net/7.0/video-js.min.css" rel="stylesheet">
+  <script src="http://vjs.zencdn.net/7.0/video.min.js"></script>
+  
     @yield('css')
 </head>
 

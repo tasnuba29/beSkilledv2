@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\videoPlayer;
 use App\Http\Requests\StorevideoPlayerRequest;
 use App\Http\Requests\UpdatevideoPlayerRequest;
+use App\Models\course;
+use Illuminate\Http\Request;
 
 class VideoPlayerController extends Controller
 {
@@ -13,9 +15,10 @@ class VideoPlayerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('videoPlayer.index');
+       $course= course::find($request->id);
+        return view('user.videoPlayer.index',compact('course'));
     }
 
     /**
