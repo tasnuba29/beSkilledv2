@@ -13,6 +13,20 @@
   .icon{
     display: none  !important;
   }
+
+  .showhoverhide{
+display: block;
+  }
+
+  .hidehovershow{
+    display:none;
+  }
+
+  .singlesupport:hover .hidehovershow{
+    display: block;
+  }.singlesupport:hover .showhoverhide{
+    display: none;
+  }
 </style>
 @endsection
 
@@ -59,13 +73,19 @@
         <div class="row text-center">
 
             @foreach ($support as $support)
-                <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class=" singlesupport col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                        <a href="" class="support-link">
+                        <a href="mailto:{{ $support -> email }}" class="support-link">
+                        <span class="showhoverhide">
                             <div class="image">
                                 <img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i>
                             </div>
+                        </span>
                             <h4 class="title">{{ $support -> title }}</h4>
+                            <span class="hidehovershow">
+                            <p class="small text-white">{{ $support -> phone }}</p>
+                            <p class="small  text-white">{{ $support -> email }}</p>
+                            </span>
                         </a>
                     </div>
                 </div>
