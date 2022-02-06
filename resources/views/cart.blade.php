@@ -9,10 +9,8 @@
   #pageHero {
     background: url("{{ asset(App\Models\additionalImage::find(6)->link )}}") center center;
     background-repeat: no-repeat;
-    background-size:  100% auto;
+    background-size: 100% auto;
   }
- 
-
 </style>
 @endsection
 
@@ -50,46 +48,62 @@
         <div class="col-12 col-md-8">
           <div class="content">
             <h2> Shopping Cart </h2>
-           <br>
-           <br>
-           <br>
+            <br>
+            <br>
+            <br>
 
 
- 
+
             @foreach(Auth::user()->cart as $cart)
-              
-            @if(  $cart -> course)
-              <div class="media">
-                <img src="{{  asset('course/images/'.$cart->course->image) }}" class="mr-3" alt="{{ $cart->course->image}}" width="150px">
-                <div class="media-body">
-                  <h5 class="mt-0">{{ $cart->course->course_title}}</h5> <br>
-                  <p> TK {{ $cart->course->price}}
+
+            @if( $cart -> course)
+            <div class="media">
+              <img src="{{  asset('course/images/'.$cart->course->image) }}" class="mr-3" alt="" width="150px">
+              <div class="media-body">
+                <h5 class="mt-0">{{ $cart->course->course_title}}</h5> <br>
+                <p class="small"> TK {{ $cart->course->price}}
+
+                <form action="{{ url('/pay') }}" method="POST" class="needs-validation">
+                  <input type="hidden" value="{{ csrf_token() }}" name="_token" />
+                  <input type="hidden" value="{{ $cart->id}}" name="cart_id" />
+                  <button type="submit" class=" btn appointment-btn scrollto  ">Pay now</button>
+                  <a  class="btn appointment-btn scrollto btn-danger bg-danger" href="{{ route('carts.show',$cart->id)}}">   remove </a>
+
+                </form>
+
+
+                </p>
+
+              </div>
+            </div>
+            @else
+
+
+            <div class="media">
+              <img src="{{ asset('seminar/images/'.$cart->seminar->breadcrumb_image) }}" class="mr-3" alt="" width="150px">
+              <div class="media-body">
+                <h5 class="mt-0">{{ $cart->seminar->title}}</h5>
+                <p class="small"> TK {{ $cart->seminar->price}}
+
+
+                <form action="{{ url('/pay') }}" method="POST" class="needs-validation">
+                  <input type="hidden" value="{{ csrf_token() }}" name="_token" />
+
+                  <input type="hidden" value="{{ $cart->id}}" name="cart_id" />
+                 
+                  <button type="submit" class=" btn appointment-btn scrollto  ">Pay now</button>
+                  <a  class="btn appointment-btn scrollto btn-danger bg-danger" href="{{ route('carts.show',$cart->id)}}">   remove </a>
+
                
-                  <a href=""><button type="submit" class=" btn appointment-btn scrollto  ">Pay now</button>  </a>
-                    <a href="{{ route('carts.show',$cart->id)}}"><button type="submit" class=" btn appointment-btn scrollto btn-danger bg-danger  ">remove</button>  </a>
-  
+                </form>
 
-                    </p>
 
-                </div>
+
+                 </p>
+
               </div>
-              @else
-         
-
-              <div class="media">
-                <img src="{{ asset('seminar/images/'.$cart->seminar->breadcrumb_image) }}" class="mr-3" alt="{{ $cart->seminar->image}}" width="150px">
-                <div class="media-body">
-                  <h5 class="mt-0">{{ $cart->seminar->title}}</h5>
-                  <p> TK {{ $cart->seminar->price}} 
-                    
-                  <a href=""><button type="submit" class=" btn appointment-btn scrollto  ">Pay now</button>  </a>
-                    <a href="{{ route('carts.show',$cart->id)}}"><button type="submit" class=" btn appointment-btn scrollto btn-danger bg-danger  ">remove</button>  </a>
-                  
-                  </p>
-
-                </div>
-              </div>
-              @endif
+            </div>
+            @endif
 
             <br>
             <hr>

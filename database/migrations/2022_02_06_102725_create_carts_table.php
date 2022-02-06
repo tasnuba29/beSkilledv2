@@ -18,6 +18,7 @@ class CreateCartsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('course_id');
             $table->unsignedBigInteger('seminar_id');
+            $table->integer('amount')->default(0);
             $table->timestamps();
         });
     }

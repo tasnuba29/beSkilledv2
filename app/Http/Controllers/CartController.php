@@ -50,6 +50,7 @@ class CartController extends Controller
         $cart->user_id= Auth::user()->id;
         $cart->seminar_id= $request->seminar_id;
         $cart->course_id= $request->course_id;
+        $cart->amount= $request->price;
         $cart->save();
     }
 
