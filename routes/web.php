@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\TrainerCourseController;
 use App\Http\Controllers\Admin\TrainerSeminarController;
 use App\Http\Controllers\Admin\UserSeminarController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\EnrollController;
 use App\Http\Controllers\FreelancerController;
 use App\Http\Controllers\HomeController;
@@ -114,6 +115,14 @@ Route::post('account-update', [UserCourseController::class, 'adminAccountUpdate'
 
 
 
+
+Route::group(['middleware' => ['auth']], function () {
+    
+ 
+
+    Route::resource('carts', CartController::class);
+        
+});
 
 
 
