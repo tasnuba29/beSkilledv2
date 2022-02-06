@@ -45,7 +45,7 @@
                                     <td>{{ number_format($course->price,'2') }}</td>
                                     <td>Paid</td>
                                     
-                                    <td><a href="" class="btn btn-primary">
+                                    <td><a href="{{route('player.index')}}?id={{$course->course->id}}" class="btn btn-primary">
                                             {{ $course->course->courseVideo->count()}}
                                         </a> </td>
 

@@ -136,6 +136,7 @@ class CourseControllernew extends Controller
      */
     public function update(Request $request, course $course)
     {
+
         $this->validate($request, [
             'course_title'       => 'required',
             'image'              => 'mimes:jpg,png,jpeg|max:7048',
@@ -154,8 +155,9 @@ class CourseControllernew extends Controller
         $course->course_title   = $request->course_title;
         $course->description    = $request->description;
         $course->price          = $request->price;
+      
 
-        $course->type          = $request->type;
+        
 
         $course->serial    = $request->serial;
 

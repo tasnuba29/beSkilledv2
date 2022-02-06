@@ -19,7 +19,56 @@ class EnrollController extends Controller
      */
     public function index(Request $request)
     {
-        ///
+        
+        
+        $card = array();
+
+        $enroll = new enroll;
+        
+        $enroll->course_id = $request->course_id; 
+        $enroll->seminar_id = $request->seminar_id;
+        $enroll->user_id = Auth::user()->id;
+        $enroll->price = $request->price;
+        $enroll->payment_method = $request->payment_method;
+        $enroll->payment_Comment = 'comment';
+        $enroll->is_due = 0;
+     
+        $participator= perticipator::where('user_id',Auth::user()->id)->first();
+        if(is_null($participator)){
+            $participator= new perticipator;
+            $participator->user_id = Auth::user()->id;
+            $participator->name = Auth::user()->name;
+            $participator->email = Auth::user()->email;
+            $participator->save();
+        }
+
+        $enroll->participator_id = $participator->id;
+        $enroll->save();
+
+        
+        // return  $enroll;
+
+        // added him as participant 
+        if ($enroll->seminar_id) {
+
+            $seminarParticipators =  new seminarParticipators;
+            $seminarParticipators->seminar_id =   $request->seminar_id;
+            $seminarParticipators->participator_id = $enroll->participator_id;
+            $seminarParticipators->save();
+            $enroll->is_assigned = 1;
+            $enroll->save();
+
+        }
+        return redirect(route('redirection'));
+        // return view('enroll', compact('card'));
+
+
+
+
+
+
+
+
     }
 
     /**
@@ -40,6 +89,7 @@ class EnrollController extends Controller
      */
     public function store(Request $request)
     {
+        // it is n't currently working 
         //    return Auth::user();
         $card = array();
 

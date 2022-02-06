@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 use App\Library\SslCommerz\SslCommerzNotification;
+use App\Models\cart;
+use App\Models\course;
 
 class SslCommerzPaymentController extends Controller
 {
@@ -21,12 +23,13 @@ class SslCommerzPaymentController extends Controller
 
     public function index(Request $request)
     {
+
         # Here you have to receive all the order data to initate the payment.
         # Let's say, your oder transaction informations are saving in a table called "orders"
         # In "orders" table, order unique identity is "transaction_id". "status" field contain status of the transaction, "amount" is the order amount to be paid and "currency" is for storing Site Currency which will be checked with paid currency.
-
+        $cart = cart::find($request->cart_id);
         $post_data = array();
-        $post_data['total_amount'] = '10'; # You cant not pay less than 10
+        $post_data['total_amount'] = $cart->amount; # You cant not pay less than 10
         $post_data['currency'] = "BDT";
         $post_data['tran_id'] = uniqid(); // tran_id must be unique
 
@@ -58,10 +61,13 @@ class SslCommerzPaymentController extends Controller
         $post_data['product_profile'] = "physical-goods";
 
         # OPTIONAL PARAMETERS
-        $post_data['value_a'] = "ref001";
+        $post_data['value_a'] = $request->cart_id;
         $post_data['value_b'] = "ref002";
         $post_data['value_c'] = "ref003";
         $post_data['value_d'] = "ref004";
+
+
+
 
         #Before  going to initiate the payment order status need to insert or update as Pending.
         $update_product = DB::table('orders')
@@ -85,7 +91,6 @@ class SslCommerzPaymentController extends Controller
             print_r($payment_options);
             $payment_options = array();
         }
-
     }
 
     public function payViaAjax(Request $request)
@@ -156,11 +161,11 @@ class SslCommerzPaymentController extends Controller
             print_r($payment_options);
             $payment_options = array();
         }
-
     }
 
     public function success(Request $request)
     {
+
         echo "Transaction is Successful";
 
         $tran_id = $request->input('tran_id');
@@ -187,7 +192,38 @@ class SslCommerzPaymentController extends Controller
                     ->where('transaction_id', $tran_id)
                     ->update(['status' => 'Processing']);
 
-                echo "<br >Transaction is successfully Completed";
+                // echo "<br >Transaction is successfully Completed";
+
+
+
+                $cart = cart::find($request->value_a);
+
+
+                // $url= route('users.enrolls.index').'?service_id='.$request->value_a.'';
+
+                $url = route('users.enrolls.index') . '?course_id=' . $cart->course_id . '&&seminar_id=' . $cart->seminar_id . '&&price=' . $cart->amount . '&&payment_method=cash';
+
+                if ($cart->course_id) {
+                    if (course::find($cart->course_id)->type == 'service') {
+                        $url .= "&&service_id=" . $cart->course_id;
+                    }
+                }
+
+                $cart->delete();
+                return redirect($url);
+
+                // <input type="text" name="course_id" id="course_id" value="{{$service->id}}" hidden>
+                // <input type="text" name="seminar_id" id="seminar_id" value="0" hidden>
+                // <input type="text" name="price" id="price" value="{{ $service -> price }}" hidden>
+
+                // <input type="text" name="payment_method" id="payment_method" value="CASH" hidden>
+
+                // <input type="text" name="payment_Comment" id="payment_Comment" value="Payment via cash" hidden>
+
+
+
+
+
             } else {
                 /*
                 That means IPN did not work or IPN URL was not set in your merchant panel and Transation validation failed.
@@ -207,8 +243,6 @@ class SslCommerzPaymentController extends Controller
             #That means something wrong happened. You can redirect customer to your product page.
             echo "Invalid Transaction";
         }
-
-
     }
 
     public function fail(Request $request)
@@ -229,7 +263,6 @@ class SslCommerzPaymentController extends Controller
         } else {
             echo "Transaction is Invalid";
         }
-
     }
 
     public function cancel(Request $request)
@@ -250,8 +283,6 @@ class SslCommerzPaymentController extends Controller
         } else {
             echo "Transaction is Invalid";
         }
-
-
     }
 
     public function ipn(Request $request)
@@ -292,7 +323,6 @@ class SslCommerzPaymentController extends Controller
 
                     echo "validation Fail";
                 }
-
             } else if ($order_details->status == 'Processing' || $order_details->status == 'Complete') {
 
                 #That means Order status already updated. No need to udate database.
@@ -307,5 +337,4 @@ class SslCommerzPaymentController extends Controller
             echo "Invalid Data";
         }
     }
-
 }

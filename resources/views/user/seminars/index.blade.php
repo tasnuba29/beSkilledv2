@@ -21,8 +21,7 @@
                                 <th>Date</th>
                                 <th> Title</th>
                                 <th>Location</th>
-                                <th>Venue</th>
-                                <th>Action</th>
+                                <th>Venue</th> 
                             </tr>
                             </thead>
                             <tbody>
@@ -33,13 +32,7 @@
                                     <td>{{ $seminar->seminar->title }}</td>
                                     <td>{{ $seminar->seminar->location }}</td>
                                     <td>{{ $seminar->seminar->venue }}</td>
-                                    <td>
-                                        <a href="{{ route('singleSeminar',$seminar->seminar->id) }}" class="btn btn-info">View</a> |
-                                      <a href="" class="btn btn-success">Chat Now</a>
                                    
-                                     {{--- <a href="{{ route('chats.show',$seminar->chat()->id) }}" class="btn btn-success">Chat Now</a>
-                                     ---}}
-                                    </td>
                                 </tr>
 
                                 @endforeach

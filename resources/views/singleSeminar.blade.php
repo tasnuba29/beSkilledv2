@@ -67,7 +67,8 @@
             <!-- <a href="#" class="appointment-btn scrollto  ">RESERVE MY SEAT</a> -->
 
 
-            <form action="{{route('users.enrolls.store')}}" method="post">
+            <!-- <form action="{{route('users.enrolls.store')}}" method="post"> -->
+            <form action="{{route('carts.store')}}" method="post">
               @csrf
               <input type="text" name="course_id" id="course_id" value="0" hidden>
               <input type="text" name="seminar_id" id="seminar_id" value="{{$seminar->id}}" hidden>

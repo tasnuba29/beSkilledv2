@@ -54,11 +54,7 @@
                                                 </div>
                                             </div>
 
-                                          <div class="dropdown-inner">
-                                                <ul class="link-list">
-                                                    <li><a href="{{route('admin.index')}}"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
-                                                </ul>
-                                            </div>
+                       
                                            
 
 

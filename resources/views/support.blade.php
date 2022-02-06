@@ -13,6 +13,30 @@
   .icon{
     display: none  !important;
   }
+
+  .showhoverhide{
+display: block;
+  }
+
+  .hidehovershow{
+    display:none;
+  }
+
+  .singlesupport:hover .hidehovershow{
+    display: block;
+  }.singlesupport:hover .showhoverhide{
+    display: none;
+  }
+
+   .boxxx{
+    padding-top: 20px;
+  }
+  
+
+  .featured-services2 .support-link {
+    display: block;
+    padding: 10px 30px;
+}
 </style>
 @endsection
 
@@ -59,13 +83,24 @@
         <div class="row text-center">
 
             @foreach ($support as $support)
-                <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                        <a href="" class="support-link">
+                <div class=" singlesupport col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box boxxx" data-aos="fade-up" data-aos-delay="100">
+                        <a href="mailto:{{ $support -> email }}" class="support-link">
+                        <span class="showhoverhide">
                             <div class="image">
                                 <img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i>
                             </div>
+                        </span>
                             <h4 class="title">{{ $support -> title }}</h4>
+                            <span class="hidehovershow">
+                            <p class="small text-white"> Phone : {{ $support -> phone }}</p>
+                            <p class="small  text-white"> Mail : {{ $support -> email }}</p>
+                            <p class="small  text-white"> <a href="{{ $support -> facebook }}"><i class="bx bxl-facebook text-white" style="
+    /* height: 120px; */
+    font-size: 25px;
+    border: 1px solid white;
+"></i></a></p>
+                            </span>
                         </a>
                     </div>
                 </div>

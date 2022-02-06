@@ -62,7 +62,8 @@
             <div class="text-center mb-3">Price : TK{{ $training -> price }}</div>
 
 
-            <form action="{{route('users.enrolls.store')}}" method="post">
+           {{-- <form action="{{route('users.enrolls.store')}}" method="post"> --}}
+            <form action="{{route('carts.store')}}" method="post">
               @csrf
               <input type="text" name="course_id" id="course_id" value="{{$training->id}}" hidden>
               <input type="text" name="seminar_id" id="seminar_id" value="0" hidden>
@@ -72,7 +73,7 @@
 
               <input type="text" name="payment_Comment" id="payment_Comment" value="Payment via cash" hidden>
 
-            <button type="submit"  class=" btn appointment-btn scrollto  ">Start Now</button>
+            <button type="submit"  class=" btn appointment-btn scrollto  ">Add to Cart</button>
             </form>
           </div>
         </div>
