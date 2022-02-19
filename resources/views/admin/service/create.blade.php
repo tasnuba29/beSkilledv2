@@ -3,7 +3,7 @@
     <div class="nk-content-body">
         <div class="card">
             <div class="card-header">
-                <h5>{{ $page_name }} <a href="{{ route('service.index') }}" class="float-right btn btn-primary text-white"> <i class="fas fa-edit"></i> <span class="ml-2">Manage Service</span></a></h5>
+                <h5>{{ $page_name }} <a href="{{ route('service.index') }}" class="float-right btn btn-primary text-white"> <i class="fas fa-edit"></i> <span class="ml-2">Manage Academic courses</span></a></h5>
             </div>
             <div class="card-body">
                 @if($message = Session::get('success'))
@@ -17,8 +17,8 @@
                         <form action="{{ route('service.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label class="form-label">Service Title<sup class="text-danger">*</sup></label>
-                                <input type="text" name="title" placeholder="Enter Service Title"  class="form-control" value="{{ old('title') }}">
+                                <label class="form-label">Academic courses Title<sup class="text-danger">*</sup></label>
+                                <input type="text" name="title" placeholder="Enter Academic courses Title"  class="form-control" value="{{ old('title') }}">
                                 @if($errors->has('title'))
                                     <span class="text-danger ">{{ $errors->first('title') }}</span>
                                 @endif

@@ -28,7 +28,7 @@ class TrainingController extends Controller
      */
     public function create()
     {
-        $page_name = 'Join New Training';
+        $page_name = 'Join New skill development courses';
         $course = seminar::all();
         return view('user.training.join', compact('page_name', 'course'));
     }

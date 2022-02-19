@@ -27,6 +27,7 @@ class BatchPerticipateController extends Controller
         $course = course::find($batch->model_id);
         $participators = BatchPerticipate::where('batch_id', $request->batch_id)->get();
         $unAssigned = enroll::where('course_id', $course->id)->where('is_assigned', 0)->get();
+        
         return view('admin.batch-participator.assign', compact('page_name', 'batch', 'course', 'participators', 'unAssigned'));
     }
 

@@ -19,22 +19,22 @@
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
                             <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                            <span class="nk-menu-text"> Services </span>
+                            <span class="nk-menu-text"> Academic courses </span>
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="{{ route('trainer.course.index') }}?type=service" class="nk-menu-link"><span class="nk-menu-text">Service List</span></a>
+                                <a href="{{ route('trainer.course.index') }}?type=service" class="nk-menu-link"><span class="nk-menu-text">Academic courses List</span></a>
                             </li>
                            </ul>
                     </li>
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
                             <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                            <span class="nk-menu-text"> Trainings </span>
+                            <span class="nk-menu-text"> skill development courses </span>
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="{{ route('trainer.course.index') }}?type=training" class="nk-menu-link"><span class="nk-menu-text">Trainings List</span></a>
+                                <a href="{{ route('trainer.course.index') }}?type=training" class="nk-menu-link"><span class="nk-menu-text">skill development courses List</span></a>
                             </li>
                            
                         </ul>

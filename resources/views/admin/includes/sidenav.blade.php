@@ -6,7 +6,7 @@
                         <a href="#" class="nk-nav-compact nk-quick-nav-icon d-none d-xl-inline-flex" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
                     </div>
                     <div class="nk-sidebar-brand"> 
-                        <a href="{{ url('/login') }}" class="logo-link nk-sidebar-logo">
+                        <a href="{{ url('/') }}" class="logo-link nk-sidebar-logo">
                             <img class="logo-light logo-img" src="{{asset('images/bbs.png')}}" srcset="./images/logo2x.png 2x" alt="logo">
                             <img class="logo-dark logo-img" src="{{asset('images/bbs.png')}}" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
                         </a>
@@ -189,14 +189,14 @@
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text"> Services</span>
+                                        <span class="nk-menu-text"> Academic courses </span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="{{route('service.create')}}" class="nk-menu-link"><span class="nk-menu-text">Add Service</span></a>
+                                            <a href="{{route('service.create')}}" class="nk-menu-link"><span class="nk-menu-text">Add Academic courses</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="{{ route('service.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Service</span></a>
+                                            <a href="{{ route('service.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Academic courses</span></a>
                                         </li>
 
                                     </ul>

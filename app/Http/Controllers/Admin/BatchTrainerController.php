@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
-
+use App\Models\Batch;
 use App\Models\Trainer;
 use App\Models\course;
 use App\Models\batchTrainer;
@@ -61,10 +61,14 @@ class BatchTrainerController extends Controller
      */
     public function edit($id)
     {
+        
+        
+
         $page_name = 'Assign Trainer';
-        $course = course::find($id);
+        $course = course::find(Batch::find($id)->model_id);
         $trainers = Trainer::all();
-        $assignedTrainers = $course->trainers;
+        
+      $assignedTrainers = $course->trainers;
 
         $assignedTrainerArray= array();
 

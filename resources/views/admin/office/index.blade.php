@@ -20,7 +20,7 @@
                                 <th>#</th>
                                 <th>Country</th>
                                 <th>Address</th>
-                                <th>Map</th>
+
                                 <th>Image</th>
                                 <th>Action</th>
                             </tr>
@@ -31,7 +31,7 @@
                                     <td>{{ ++$i }}</td>
                                     <td>{{ $offices->country }}</td>
                                     <td>{{ $offices->location }}</td>
-                                    <td>{{ $offices->map_link }}</td>
+                                    
                                     <td>
                                         <img src="{{ asset('office/images/'.$offices->image) }}" class="img-thumbnail" style="height: 70px;width: 70px">
                                     </td>
