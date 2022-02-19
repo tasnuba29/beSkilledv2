@@ -18,7 +18,7 @@
 
                 <div class="col-md-12 col-sm-12 float-left" style="border-top: 1px solid blue">
                     <h3 class="text-center p-2">Course Videos <a href="{{route('chapters.index')}}?course_id={{$course->id}}">
-                            <div class="btn btn-sm btn-outline-primary">Chapters</div>
+                            <div class="btn btn-sm btn-outline-primary">Weeks</div>
                         </a></h3>
 
                     @foreach ($course->chapters as $chapter)
@@ -50,7 +50,6 @@
             <div class="col-md-6 float-left">
                 <label>Course Name : <span class="font-weight-bold ml-2">{{ $course->course_title }}</span></label><br />
                 <label>Course Price : <span class="font-weight-bold ml-2">{{ number_format($course->price, '2') }}</span></label><br />
-                <label>Introduction Video: <span class="tex-justify"><a target="_blank" href="{{ asset('course/video/'.$course->introduction_video) }}">{{ $course->introduction_video }}</a></span></label><br />
                 <label>Total Trainers: <span class="font-weight-bold ml-2"> {{ $course->trainers->count()}}</span></label><br />
                 <label>Total Videos: <span class="font-weight-bold ml-2">{{ $course->courseVideo->count()}} </span></label><br />
                 <p class="text-justify"> Description: <?php echo $course->description ?></p>

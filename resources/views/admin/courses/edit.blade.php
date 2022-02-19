@@ -39,9 +39,9 @@
                                 <select class="form-select form-select-sm" value="{{$course->type}}" name="type" data-search="off" > 
                               
                                 @if($course->type == 'service')
-                                <option value="service" selected="selected">Service </option>
+                                <option value="service" selected="selected">Academic courses </option>
                                 @else  
-                                <option value="service">Service </option>
+                                <option value="service">Academic courses </option>
                                 @endif
                                 
                                 

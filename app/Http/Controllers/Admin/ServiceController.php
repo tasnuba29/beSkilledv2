@@ -16,7 +16,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $page_name = 'All Service List';
+        $page_name = 'All Academic courses';
         $service = Service::all();
         return view('admin.service.index', compact('page_name','service'));
     }
@@ -28,7 +28,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        $page_name = 'Add New Service';
+        $page_name = 'Add New Academic courses';
         return view('admin.service.create', compact('page_name'));
     }
 
@@ -70,7 +70,7 @@ class ServiceController extends Controller
         }
 
         $service->save();
-        return redirect()->route('service.index')->with('success','Service added Successful');
+        return redirect()->route('service.index')->with('success','Academic courses added Successful');
     }
 
     /**
@@ -135,7 +135,7 @@ class ServiceController extends Controller
 
         }
         $service->save();
-        return redirect()->route('service.index')->with('success','Service Data Update Successful');
+        return redirect()->route('service.index')->with('success','Academic courses  Data Update Successful');
     }
 
 
@@ -148,7 +148,7 @@ class ServiceController extends Controller
     public function destroy(service $service)
     {
         $service->delete();
-        return redirect()->route('service.index')->with('success','Service Data Delete Successful');
+        return redirect()->route('service.index')->with('success','Academic courses Data Delete Successful');
 
     }
 }

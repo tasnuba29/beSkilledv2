@@ -25,7 +25,7 @@ class UserCourseController extends Controller
 
 
     public function services(){
-        $page_name = 'My Services';
+        $page_name = 'My academic courses';
         // $courses = BatchPerticipate::where('user_id',Auth::user()->id)->get();
         $courses = enroll::where('user_id',Auth::user()->id)->get();
 

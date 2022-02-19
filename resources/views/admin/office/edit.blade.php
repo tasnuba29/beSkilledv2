@@ -13,7 +13,7 @@
                             @csrf
                             @method('PUT')
                             <div class="form-group">
-                                <label class="form-label">Country Name<sup class="text-danger">*</sup></label>
+                                <label class="form-label"> Name<sup class="text-danger">*</sup></label>
                                 <input type="text" name="country" placeholder="Enter Country Name"  class="form-control" value="{{ $office->country }}">
                                 @if($errors->has('country'))
                                     <span class="text-danger ">{{ $errors->first('country') }}</span>

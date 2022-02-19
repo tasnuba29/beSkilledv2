@@ -33,7 +33,15 @@
   <link rel="stylesheet" href="{{ asset('theme/admin/assets/css/libs/fontawesome-icons.css?ver=2.4.0') }}">
   @yield('css')
 
-
+<style>
+    @if( Auth::user())
+@if(( Auth::user()->hasRole('admin')))
+.appointment-btn{
+  display:none;
+}
+@endif
+@endif
+</style>
 
 </head>
 
@@ -114,6 +122,8 @@
     <!-- End Contact Section -->
 
   </main><!-- End #main -->
+ 
+
 
   <!-- ======= Footer ======= -->
   @include('includes.footer')

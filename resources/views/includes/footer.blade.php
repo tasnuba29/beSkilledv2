@@ -28,7 +28,7 @@
             <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">CAREER</a></div>
            <!-- <div class="col-6"><a href="{{route('trainings')}}" class="appointment-btn m-2">COURSES</a></div>-->
             <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">FIND US ON MAP</a></div>
-           <!-- <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">SERVICES</a></div>-->
+           <!-- <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">Academic courses</a></div>-->
             <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">CONTACT DETAILS</a></div>
           </div>
 
@@ -107,7 +107,7 @@
         <div class="col-lg-3 col-md-6 footer-links footer-links1">
           <ul>
             <li><i class="bx bx-chevron-right"></i> <a href="#">About</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Academic courses</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Meetups</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Training</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Seminars</a></li>

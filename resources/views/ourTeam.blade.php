@@ -51,7 +51,7 @@
                     echo (implode(' ', array_slice(explode(' ', strip_tags($trainer ->long_desctiption)), 0, 13))."\n");
                     @endphp
                 </span>
-                <a href="">Read More</a>
+                <!-- <a href="">Read More</a> -->
               </div>
             </div>
           </div>

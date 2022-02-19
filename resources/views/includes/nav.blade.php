@@ -20,7 +20,7 @@ $navServices = App\Models\course::where('type','service')->orderBy('serial')->ge
 
 
 
-        <li class="drop-down {{ (request()-> is('about')) ? 'active' : '' }}}}"><a href="#">Services</a>
+        <li class="drop-down {{ (request()-> is('about')) ? 'active' : '' }}}}"><a href="#">Academic courses</a>
             <ul>
                 @foreach($navServices as $navService)
 
@@ -58,58 +58,7 @@ $navServices = App\Models\course::where('type','service')->orderBy('serial')->ge
         </li>
 
 
-{{--
-
-        <li class="drop-down {{ (request()-> is('services')) ? 'active' : '' }}"><a>We Provide</a>
-            <ul class="megha-menu-ul">
-                <li>
-                    <div class=" row megha-menu">
-                        <div class="col-md-6">
-
-                            <a href="{{route('services')}}" style=" font-weight: bold; text-transform: uppercase">
-                                <i class="fas fa-link" style="margin-right: 5px;"></i>
-                                Services
-                            </a>
-                            <div class="megha-item">
-
-                                @foreach($navServices as $navService)
-
-                                <a href="{{url('single-services',$navService->id)}}">{{$navService->course_title}}</a>
-                                @endforeach
-                                <a href="{{route('services')}}" class="font-weight-bold font-italic">More >> </a>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-4">
-
-                            <a href="{{route('trainings')}}" style=" font-weight: bold; text-transform: uppercase">
-                                <i class="fas fa-link" style="margin-right: 5px;"></i>
-                                Trainings
-                            </a>
-                            <div class="megha-item">
-
-                                @foreach($navTrainngs as $navTrainng)
-
-
-
-                                <a href="{{route('singleTrainings',$navTrainng->id)}}">{{$navTrainng->course_title}} </a>
-
-                                @endforeach
-
-                                <a href="{{route('trainings')}}" class=" font-weight-bold font-italic">More >> </a>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </li>
-            </ul>
-        </li>
-
-
-        --}}
+ 
      
 
         <li class="{{ (request()-> is('seminar')) ? 'active' : '' }}"><a href="{{route('seminar')}}">Seminar</a></li>

@@ -29,9 +29,9 @@
                                          <span class="text-danger ">{{ $errors->first('batch_name') }}</span>
                                     @endif
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" style="display:none;">
                                     <label class="form-label">Price<sup class="text-danger">*</sup></label>
-                                    <input type="number" min="1" name="price" class="form-control" placeholder="Enter Price" value="{{ old('prrice') }}">
+                                    <input type="number" min="1" name="price" class="form-control" placeholder="Enter Price" value="100">
                                     @if($errors->has('price'))
                                          <span class="text-danger ">{{ $errors->first('price') }}</span>
                                     @endif

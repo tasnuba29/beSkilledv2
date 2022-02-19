@@ -80,6 +80,9 @@ class User extends Authenticatable
     }
     public function isRegisteredSeminar($seminar_id)
     {
+        if(( Auth::user()->hasRole('admin'))){
+            return 0;
+        }
 
         $seminarParticipator =  seminarParticipators::where('participator_id', Auth::user()->perticipator->id)->where('seminar_id', $seminar_id)->first();
 

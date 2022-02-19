@@ -36,12 +36,26 @@
                                 @endif
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Chapter<sup class="text-danger">*</sup></label>
+                                <label class="form-label">Week<sup class="text-danger">*</sup></label>
+                               
+                               @if($course->chapters->first()) 
                                 <select class="form-control" name="chapter_id"  value="{{$course->chapters->first()->id }}">
                                 @foreach ($course->chapters as $chapter)
                                 <option value="{{ $chapter->id }}">{{ $chapter->title }}</option>
                                 @endforeach
                           </select>
+
+                          @else
+                          <div class="text-danger"  >No Weeks Found.   <a href="{{route('chapters.index')}}?course_id={{$course->id}}">
+                            <div class="btn btn-sm btn-outline-primary"> Add Weeks</div>
+                        </a> </div>
+                          <select class="form-control" name="chapter_id"  value="" required>
+                                
+                         
+                          </select
+
+                          @endif
+
                                 @if($errors->has('chapter'))
                                     <span class="text-danger ">{{ $errors->first('chapter') }}</span>
                                 @endif

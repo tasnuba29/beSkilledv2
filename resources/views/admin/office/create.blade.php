@@ -17,7 +17,7 @@
                         <form action="{{ route('office.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label class="form-label">Country Name<sup class="text-danger">*</sup></label>
+                                <label class="form-label">Office Name<sup class="text-danger">*</sup></label>
                                 <input type="text" name="country" placeholder="Enter Country Name"  class="form-control" value="{{ old('country') }}">
                                 @if($errors->has('country'))
                                     <span class="text-danger ">{{ $errors->first('country') }}</span>

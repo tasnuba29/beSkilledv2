@@ -19,11 +19,11 @@
                               <li class="nk-menu-item has-sub">
                                <a href="#" class="nk-menu-link nk-menu-toggle">
                                     <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                    <span class="nk-menu-text"> Services</span>
+                                    <span class="nk-menu-text"> Academic courses</span>
                                 </a> 
                                 <ul class="nk-menu-sub">
                                     <li class="nk-menu-item">
-                                        <a href="{{ route('users.services') }}" class="nk-menu-link"><span class="nk-menu-text"> My Services List</span></a>
+                                        <a href="{{ route('users.services') }}" class="nk-menu-link"><span class="nk-menu-text"> My Academic courses List</span></a>
                                     </li>
                                     
                                 </ul>
