@@ -83,7 +83,7 @@
                         echo (implode(' ', array_slice(explode(' ', strip_tags($ourTeam -> short_desctiption)), 0, 13))."\n");
                         @endphp
                     </span>
-                    <a href="">Read More</a>
+                    <!-- <a href="">Read More</a> -->
                   </div>
                 </div>
               </div>

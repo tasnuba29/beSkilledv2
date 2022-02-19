@@ -109,7 +109,7 @@
             <li><i class="bx bx-chevron-right"></i> <a href="#">About</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Academic courses</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Meetups</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Training</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">skill development courses</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Seminars</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Marketplace</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Hire A Va</a></li>

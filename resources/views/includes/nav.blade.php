@@ -38,7 +38,7 @@ $navServices = App\Models\course::where('type','service')->orderBy('serial')->ge
 
 
 
-        <li class="drop-down {{ (request()-> is('about')) ? 'active' : '' }}}}"><a href="#"> Trainings</a>
+        <li class="drop-down {{ (request()-> is('about')) ? 'active' : '' }}}}"><a href="#"> skill development courses</a>
             <ul>
 
 

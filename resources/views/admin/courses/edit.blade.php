@@ -46,9 +46,9 @@
                                 
                                 
                                 @if($course->type == 'training')
-                                <option value="training" selected="selected">Training </option>
+                                <option value="training" selected="selected">skill development courses </option>
                                 @else  
-                                <option value="training">Training </option>
+                                <option value="training">skill development courses </option>
                                 @endif
                                 
                                 

@@ -37,7 +37,7 @@ class UserCourseController extends Controller
     }
 
     public function trainings(){
-        $page_name = 'My  Trainings';
+        $page_name = 'My skill development courses';
         $courses = enroll::where('user_id',Auth::user()->id)->get();
         $type="training";
         return view('user.courses.index',compact('page_name','courses','type'));
