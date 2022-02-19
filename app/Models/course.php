@@ -11,7 +11,7 @@ class course extends Model
 
     public function trainers(){
         return $this->hasMany(batchTrainer::class, 'batch_id','id');
-       }
+    }
        
        public function chapters(){
         return $this->hasMany(chapter::class)->orderBy('serial');

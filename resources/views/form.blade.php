@@ -73,7 +73,7 @@
                             <input type="text" name="" class="form-control" placeholder="Enter Your Country"/>
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="text" name="" class="form-control"  placeholder="Virtual assistant training"/>
+                            <input type="text" name="" class="form-control"  placeholder="Virtual assistant skill development courses"/>
                         </div>
 
                         <div class="form-group col-md-6">

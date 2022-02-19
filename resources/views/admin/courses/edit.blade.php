@@ -39,16 +39,16 @@
                                 <select class="form-select form-select-sm" value="{{$course->type}}" name="type" data-search="off" > 
                               
                                 @if($course->type == 'service')
-                                <option value="service" selected="selected">Service </option>
+                                <option value="service" selected="selected">Academic courses </option>
                                 @else  
-                                <option value="service">Service </option>
+                                <option value="service">Academic courses </option>
                                 @endif
                                 
                                 
                                 @if($course->type == 'training')
-                                <option value="training" selected="selected">Training </option>
+                                <option value="training" selected="selected">skill development courses </option>
                                 @else  
-                                <option value="training">Training </option>
+                                <option value="training">skill development courses </option>
                                 @endif
                                 
                                 

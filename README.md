@@ -23,7 +23,7 @@
 <li style="font-weight: 400;" aria-level="1" aria-checked="false"><span style="font-weight: 400;">contact information</span></li>
 </ul>
 <p><br /><br /></p>
-<h1><strong>5. trainings</strong></h1>
+<h1><strong>5. Skill development courses </strong></h1>
 <ul>
 <li style="font-weight: 400;" aria-level="1" aria-checked="false"><span style="font-weight: 400;">video series&nbsp;</span></li>
 <ul>

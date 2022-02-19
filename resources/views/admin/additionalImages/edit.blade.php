@@ -19,7 +19,7 @@
                         @method('PUT')
                         <div class="form-group">
                             <label class="form-label">File Title<sup class="text-danger">*</sup></label>
-                            <input type="text" name="title" placeholder="Enter Service Title" class="form-control" value="{{ $additionalImage->title }}" required>
+                            <input type="text" name="title" placeholder="Enter Academic courses Title" class="form-control" value="{{ $additionalImage->title }}" required>
                         </div>
 
 

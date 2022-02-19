@@ -79,9 +79,10 @@ class CourseVideoController extends Controller
      * @param  \App\Models\courseVideo  $courseVideo
      * @return \Illuminate\Http\Response
      */
-    public function show(courseVideo $courseVideo)
+    public function show( $courseVideo)
     {
-        //
+        courseVideo::find($courseVideo)->delete();
+         return  back();
     }
 
     /**
@@ -157,6 +158,6 @@ class CourseVideoController extends Controller
      */
     public function destroy(courseVideo $courseVideo)
     {
-        //
+        return  $courseVideo;
     }
 }

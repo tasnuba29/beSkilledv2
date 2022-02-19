@@ -17,9 +17,9 @@ class TrainerCourseController extends Controller
     {
         $type= $request->type;
         if($request->type=="service")
-        $page_name = "My Service List";
+        $page_name = "My Academic courses List";
         else
-        $page_name = "My Training List";
+        $page_name = "My skill development courses List";
 
 
         $trainer= Auth::user()->trainer;

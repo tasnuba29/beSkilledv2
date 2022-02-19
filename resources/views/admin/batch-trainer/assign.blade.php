@@ -48,7 +48,7 @@
 
                         <ul class="list-group">
                             @foreach ($assignedTrainers as $trainer)
-                            <li> <a href="{{route('trainers.show',$trainer->trainer->id)}}"> {{$trainer->trainer->name}}</a> <a href="{{ route('batch-trainers.destroy', $trainer->id) }}" class="close btn btn-sm  pl-3 pr-3 ">x</a> </li>
+                            <li> <a href="{{route('trainers.edit',$trainer->trainer->id)}}"> {{$trainer->trainer->name}}</a> <a href="{{ route('batch-trainers.destroy', $trainer->id) }}" class="close btn btn-sm  pl-3 pr-3 ">x</a> </li>
 
                             @endforeach
                         </ul>

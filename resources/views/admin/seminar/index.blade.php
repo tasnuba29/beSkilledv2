@@ -48,10 +48,10 @@
                                             {{ $seminars->trainers->count()}}
                                         </a>
                                     </td>
-                                    <td>
-                                        <a href="{{ route('seminar-participators.edit', $seminars->id) }}" class="btn btn-primary">
+                                    <td  class="text-center">
+                                        
                                         {{ $seminars->participators->count()}}
-                                        </a>
+                                        
                                     </td>
                                     <td>
                                         <form action="{{ route('seminar.destroy', $seminars->id) }}" method="post">

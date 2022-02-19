@@ -77,13 +77,16 @@
               <input type="text" name="payment_method" id="payment_method" value="CASH" hidden>
 
               <input type="text" name="payment_Comment" id="payment_Comment" value="Payment via cash" hidden>
-              @if(Auth::user() && Auth::user()->isRegisteredSeminar($seminar -> id))
+
+              @if(Auth::user())
+              @if( Auth::user()->isRegisteredSeminar($seminar -> id))
               
             <a  href="{{ route('users.seminars.index') }}"  class=" btn appointment-btn scrollto  ">View</a>
               @else
 
             <button type="submit"  class=" btn appointment-btn scrollto  ">RESERVE MY SEAT</button>
             
+            @endif
             @endif
             </form>
 

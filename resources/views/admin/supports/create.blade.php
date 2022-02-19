@@ -18,7 +18,7 @@
                             @csrf
                             <div class="form-group">
                                 <label class="form-label"> Title<sup class="text-danger">*</sup></label>
-                                <input type="text" name="title" placeholder="Enter Service Title"  class="form-control" value="{{ old('title') }}">
+                                <input type="text" name="title" placeholder="Enter Academic courses Title"  class="form-control" value="{{ old('title') }}">
                                 @if($errors->has('title'))
                                     <span class="text-danger ">{{ $errors->first('title') }}</span>
                                 @endif

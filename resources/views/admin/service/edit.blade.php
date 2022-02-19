@@ -18,8 +18,8 @@
                             @csrf
                             @method('PUT')
                             <div class="form-group">
-                                <label class="form-label">Service Title<sup class="text-danger">*</sup></label>
-                                <input type="text" name="title" placeholder="Enter Service Title"  class="form-control" value="{{ $service->title }}">
+                                <label class="form-label">Academic courses Title<sup class="text-danger">*</sup></label>
+                                <input type="text" name="title" placeholder="Enter Academic courses Title"  class="form-control" value="{{ $service->title }}">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Sub Title </label>

@@ -63,9 +63,11 @@
                         </div>
                         <div class="member-info">
                             <h4>{{ $office -> country }}</h4>
-                            <h5>HEAD OFFICE (LHR)</h5>
                             <p>{{ $office -> location }}</p>
-                            <a href="">View On More</a>
+                            <a href="{{ $office->map_link }}" target="_blank"> View On Map</a>
+                            
+                    
+                    
                         </div>
                     </div>
                 </div>
