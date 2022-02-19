@@ -37,7 +37,7 @@
 
                                     @foreach ($chapter->videos as $videos)
                                     <div class="mb-2">
-                                        <a href="{{ asset('course/video/'.$videos->video_link) }}">{{ $videos->video_title }}</a>
+                                        <a href="{{ asset('course/video/'.$videos->video_link) }}">{{ $videos->video_title }}</a> <a href="{{route('coursevideos.destroy',$videos->id)}}" class="btn btn-danger ml-3">delete</a>
                                     </div>
                                     @endforeach
                                 </div>
