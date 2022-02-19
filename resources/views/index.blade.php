@@ -65,11 +65,11 @@
               <div class="icon-box mt-4 mt-xl-0">
                 <a href="{{ route('marketplace') }}">
                     <i class="bx bx-receipt"></i>
-                    <h4>Marketplace</h4>
+                    <h4>Video Series Related Concern</h4>
                     <p>{{App\Models\additionalSetting::find(2)->value }}</p>
                 </a>
               </div>
-            </div>
+            </div> 
             <div class="col-xl-4 d-flex align-items-stretch">
               <div class="icon-box mt-4 mt-xl-0">
                 <a href="">
