@@ -36,18 +36,28 @@
                             <th> Address </th>
                             <td class="font-weight-bold"> {{ $trainer->address }}</td>
                         </tr>
+                       {{---
                         <tr>
                             <th class="bg-dark text-light"> Assign Course List </th>
                             <th class="bg-dark text-light"> Batch</th>
                         </tr>
-                        @foreach ($trainer->batches as $batch)
+
+                        @if($trainer->batches->count() > 0)
+                      @foreach ($trainer->batches as $batch)
                         <tr>
+                            
+                          
+           
+
+                  
                             <td> <a href="{{route('courses.show',App\Models\batch::find($batch->batch_id)->course->id)}}"> {{ App\Models\batch::find($batch->batch_id)->course->course_title}} </a></td>
                             <td> <a href="{{route('batches.show',$batch->batch_id)}}"> {{ App\Models\batch::find($batch->batch_id)->batch_name}} </a></td>
+
+                           
                         </tr>
                         @endforeach
-
-
+                     
+                        @endif
 
                         <tr>
                             <th class="bg-dark text-light  "  > Assign Seminar List </th>
@@ -70,7 +80,7 @@
                         @endforeach
                         @endif
 
-
+                        --}}
                     </table>
                 </div>
             </div>

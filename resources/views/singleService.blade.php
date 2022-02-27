@@ -77,6 +77,9 @@
 
             <button type="submit"  class=" btn appointment-btn scrollto  ">Add to card</button>
             </form>
+
+ 
+
           </div>
         </div>
 

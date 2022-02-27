@@ -33,7 +33,14 @@
                                 <tr>
                                     <td>{{ ++$i }}</td>
                                     <td>{{ $course->course_title }}</td>
-                                    <td>{{ $course->type }}</td> 
+
+                                    @if( $course->type =='service')  
+                                    <td>Academic courses </td>
+                                    @else
+                                    <td>skill development courses</td>
+                                    @endif
+
+                                     
                                     <td>{{ $course->price }}</td>
                                     <td>{{ $course->serial }}</td>
                                     {{--
