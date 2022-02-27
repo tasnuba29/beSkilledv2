@@ -38,11 +38,21 @@
                                     <span class="text-danger ">{{ $errors->first('venue') }}</span>
                                 @endif
                             </div>
+
+                            <!-- 2023-01-01 00:00:00 -->
+
                             <div class="form-group">
                                 <label class="form-label">Date<sup class="text-danger">*</sup></label>
-                                <input type="date" name="date" class="form-control" value="{{ $seminar->date}}">
+                                <input type="date" name="date" class="form-control" value="{{ date('Y-m-d', strtotime($seminar->date)) }}">
                                 @if($errors->has('date'))
                                     <span class="text-danger ">{{ $errors->first('date') }}</span>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Time<sup class="text-danger">*</sup></label>
+                                <input type="time" name="time" class="form-control" value="{{ $seminar->time}}">
+                                @if($errors->has('time'))
+                                    <span class="text-danger ">{{ $errors->first('time') }}</span>
                                 @endif
                             </div>
                             <div class="form-group">

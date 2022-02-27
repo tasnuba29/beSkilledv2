@@ -40,6 +40,8 @@ class SeminarController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request;
+     
 
         $this->validate($request, [
             'title'    => 'required',
@@ -63,6 +65,7 @@ class SeminarController extends Controller
         $seminar->venue     = $request->venue;
         $seminar->date      = $request->date;
         $seminar->price     = $request->price;
+        $seminar->time     = $request->time;
         $seminar->status    = $request->status;
         $seminar->description    = $request->description;
 

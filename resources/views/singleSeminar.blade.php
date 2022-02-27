@@ -59,7 +59,11 @@
           <div class="content border border-dark rounded p-4 mb-4 text-center">
             
           <div class="text-center font-weight-bold mb-3 font-italic">{{ $seminar -> title }}</div>
-            <div class="text-left"> <span class="font-weight-bold ">Date: &nbsp;&nbsp;&nbsp;</span><span class="font-italic ">{{ date('F Y', strtotime($seminar -> date)) }} </span> </div>
+          <div class="text-left"> <span class="font-weight-bold ">Date: &nbsp;&nbsp;&nbsp;</span><span class="font-italic ">{{ date('F Y', strtotime($seminar -> date)) }} </span> </div>
+          <div class="text-left"> <span class="font-weight-bold ">Time: &nbsp;&nbsp;&nbsp;</span><span class="font-italic ">  {{ date('h:i a', strtotime($seminar -> time)) }}  </span> </div>
+           
+          
+            
             <div class="text-left">  <span class="font-weight-bold ">Location: &nbsp;&nbsp;&nbsp;</span><span class="font-italic ">   {{ $seminar -> location }} </span> </div>
             <div class="text-left"> <span class="font-weight-bold ">Venue: &nbsp;&nbsp;&nbsp;</span>  <span class="font-italic ">  {{ $seminar -> venue }} </span> </div> 
             <hr>

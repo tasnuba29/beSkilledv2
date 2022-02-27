@@ -21,6 +21,7 @@
                                 <th>Location</th>
                                 <th>Venue</th>
                                 <th>Date</th>
+                                <th>Time</th>
                                 <th>Price</th>
                                 <th>Status</th>
                                 <th>Trainers</th>
@@ -35,6 +36,7 @@
                                     <td>{{ $seminars->location }}</td>
                                     <td>{{ $seminars->venue }}</td>
                                     <td>{{ date('d-M-Y', strtotime($seminars->date)) }}</td>
+                                    <td>  {{ date('h:i a', strtotime($seminars -> time)) }} </td>
                                     <td>{{ number_format($seminars->price, '2') }}</td>
                                     <td>
                                         @if ($seminars->status == '0')
