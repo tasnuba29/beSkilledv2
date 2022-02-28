@@ -44,9 +44,26 @@
                                     <span class="text-danger ">{{ $errors->first('date') }}</span>
                                 @endif
                             </div>
+
+
+
+
+                            
+                            <div class="form-group">
+                                <label class="form-label">Date<sup class="text-danger">*</sup></label>
+                                <input type="time" name="time" class="form-control" value="{{ old('time')?? today()->format('h:m') }}">
+                                @if($errors->has('date'))
+                                    <span class="text-danger ">{{ $errors->first('date') }}</span>
+                                @endif
+                            </div>
+
+
+
+
+                            
                             <div class="form-group">
                                 <label class="form-label">Price<sup class="text-danger">*</sup></label>
-                                <input type="number" min="1" name="price" placeholder="Enter Price"  class="form-control" value="{{ old('price')??0 }}">
+                                <input type="number" min="0" name="price" placeholder="Enter Price"  class="form-control" value="{{ old('price')??0 }}">
                                 @if($errors->has('price'))
                                     <span class="text-danger ">{{ $errors->first('price') }}</span>
                                 @endif

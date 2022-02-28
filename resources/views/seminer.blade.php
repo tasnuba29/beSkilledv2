@@ -75,7 +75,7 @@
               <tbody>
                 @foreach ($seminar as $seminar)
                     <tr>
-                        <th scope="row">{{ date('F Y', strtotime($seminar -> date)) }}</th> 
+                        <th scope="row">{{ date('F Y', strtotime($seminar -> date)) }} - {{ date('h:i a', strtotime($seminar -> time)) }} </th> 
                         <td>{{ $seminar -> title }}</td>
                         <td>{{ $seminar -> location }}</td>
                         <td>{{ $seminar -> venue  }}</td>
