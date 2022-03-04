@@ -7,11 +7,14 @@
   <div class="row">
     <div class="col-md-12">
 
+    <div class="p-5">
+            <h5>{{$course->course_title}}</h5>
+
+        </div>
 
 
 
-
-      <div class="col-md-12 col-sm-12 float-left" style="border-top: 1px solid blue">
+      <div class="col-md-12 col-sm-12 float-left"  >
 
 
         @foreach ($course->chapters as $chapter)
