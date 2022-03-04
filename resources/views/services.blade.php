@@ -56,7 +56,7 @@
                     </p>
 
                     <div class="text-center">
-                        <a href="{{ url('single-services/'. $service -> id) }}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                        <a href="{{ url('single-service/'. $service -> id) }}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
                     </div>
                     </div>
                 </div>

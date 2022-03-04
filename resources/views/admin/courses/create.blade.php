@@ -46,8 +46,8 @@
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Course Type<sup class="text-danger">*</sup></label>
                                 <select class="form-select form-select-sm" name="type" data-search="off" data-placeholder="Training"> 
-                                                                    <option value="training">skill development courses</option>
-                                                                  <option value="service">Academic courses </option>
+                                                                    <option value="training">Skill Development Courses</option>
+                                                                  <option value="service">Academic Courses </option>
                                                                   
                                </select>
                                 

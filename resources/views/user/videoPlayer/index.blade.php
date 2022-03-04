@@ -20,7 +20,7 @@
             <div class="card-header  text-white bg-dark" id="headingOne">
               <h5 class="mb-0">
                 <button class="btn btn-link text-white w-100" data-toggle="collapse" data-target="#collapse{{ $chapter->id }}" aria-expanded="true" aria-controls="collapseOne">
-                  Chapter {{ $chapter->title}}
+                   {{ $chapter->title}}
                 </button>
               </h5>
             </div>

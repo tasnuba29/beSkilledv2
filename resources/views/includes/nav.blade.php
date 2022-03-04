@@ -25,7 +25,7 @@ $navServices = App\Models\course::where('type','service')->orderBy('serial')->ge
                 @foreach($navServices as $navService)
 
 
-                <li class="{{ (request()-> is('about')) ? 'active' : '' }}"><a href="{{url('single-services',$navService->id)}}">{{$navService->course_title}}</a></li>
+                <li class="{{ (request()-> is('about')) ? 'active' : '' }}"><a href="{{url('single-service',$navService->id)}}">{{$navService->course_title}}</a></li>
 
                 @endforeach
                 <a href="{{route('services')}}" class="font-weight-bold font-italic">More >> </a>
@@ -38,7 +38,7 @@ $navServices = App\Models\course::where('type','service')->orderBy('serial')->ge
 
 
 
-        <li class="drop-down {{ (request()-> is('about')) ? 'active' : '' }}}}"><a href="#"> skill development courses</a>
+        <li class="drop-down {{ (request()-> is('about')) ? 'active' : '' }}}}"><a href="#"> Skill Development Courses</a>
             <ul>
 
 

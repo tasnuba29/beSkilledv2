@@ -103,7 +103,7 @@
 
   <header class="section-header2">
       <!-- <h2>Our Values</h2> -->
-      <p class="section--header">BeSkilled Cources</p>
+      <p class="section--header">Skill Development Courses</p>
       </header>
       <p class="text-dark text-center " style="font-size: 120%;"> {{App\Models\additionalSetting::find(5)->value }}</p>
 
@@ -141,13 +141,13 @@
 
     <header class="section-header2">
       <!-- <h2>BeSkilled Services</h2> -->
-      <p class="section--header">BeSkilled Services</p>
+      <p class="section--header">Academic Courses</p>
   </header>
   <p class="text-dark text-center " style="font-size: 120%;">{{App\Models\additionalSetting::find(6)->value }}</p>
 
     <div class="row">
 
-      @foreach ($services as $service)
+      @foreach ($service as $service)
         <div class="col-lg-4 mb-3">
             <div class="box" data-aos="fade-up" data-aos-delay="200" style="background: #258cf5;">
             <img src="{{ asset('course/images/'.$service -> image) }}" class="img-fluid" alt="">
@@ -159,7 +159,7 @@
             </p>
 
             <div class="text-center">
-                <a href="{{ url('single-services/'. $service -> id) }}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                <a href="{{ url('single-service/'. $service -> id) }}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
             </div>
             </div>
         </div>
