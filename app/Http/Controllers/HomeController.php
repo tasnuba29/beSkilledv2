@@ -19,7 +19,7 @@ class HomeController extends Controller
         $trainings =  course::where('type','training')->orderBy('serial')->get() -> take(6);
         $seminars = seminar::all() -> take(3);
         return view('index', [
-            'services' => $services,
+            'service' => $services,
             'seminars' => $seminars,
             'trainings' => $trainings,
         ]);
