@@ -35,8 +35,8 @@
                             @endif
                         </div>
                         <div class="form-group col-md-6 float-left">
-                            <label class="form-label"> Email </label>
-                            <input type="email" name="email" placeholder="Enter Trainer Email" class="form-control" value="{{ Auth::user()->email }}" required>
+                            <label class="form-label"> Email </label> 
+                            <input type="email" name="email" placeholder="Enter Trainer Email" class="form-control" value="{{ Auth::user()->email }}" disabled  required>
                             @if($errors->has('email'))
                             <span class="text-danger ">{{ $errors->first('email') }}</span>
                             @endif
@@ -53,6 +53,9 @@
                             <div class="mt-1">
                                 <input type="file" name="image" class="form-control">
                             </div>
+                            @if($errors->has('image'))
+                            <span class="text-danger ">{{ $errors->first('image') }}</span>
+                            @endif
                         </div>
 
 
