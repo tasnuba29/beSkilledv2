@@ -36,7 +36,7 @@
                         </div>
                         <div class="form-group col-md-6 float-left">
                             <label class="form-label"> Email </label>
-                            <input type="email" name="email" placeholder="Enter Trainer Email" class="form-control" value="{{ $user->email }}" required>
+                            <input type="email" name="email" placeholder="Enter Email" class="form-control" value="{{ $user->email }}" required>
                             @if($errors->has('email'))
                             <span class="text-danger ">{{ $errors->first('email') }}</span>
                             @endif

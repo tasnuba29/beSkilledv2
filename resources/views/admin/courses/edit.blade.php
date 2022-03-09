@@ -34,34 +34,36 @@
                                     <span class="text-danger ">{{ $errors->first('price') }}</span>
                                 @endif
                             </div>
-                           {{-- <div class="form-group col-md-6 float-left">
+                                {{-- <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Course Type<sup class="text-danger">*</sup></label>
                                 <select class="form-select form-select-sm" value="{{$course->type}}" name="type" data-search="off" > 
                               
-                                @if($course->type == 'service')
-                                <option value="service" selected="selected">Academic courses </option>
-                                @else  
-                                <option value="service">Academic courses </option>
+                                @if($course->type == 'academic')
+                                <option value="Academic Course" selected="selected">Academic courses </option>
+                                  @else  
+                                <option value="Academic Course">Academic courses </option> 
                                 @endif
                                 
                                 
-                                @if($course->type == 'training')
-                                <option value="training" selected="selected">skill development courses </option>
-                                @else  
-                                <option value="training">skill development courses </option>
+                                @if($course->type == 'skill-development')
+                                 <option value="Skill Development Course" selected="selected">skill development courses </option>
+                                @else 
+                                <option value="Skill Development Course">skill development courses </option>  
                                 @endif
                                 
                                 
-                                @if($course->type == 'seminar')
+                                   @if($course->type == 'seminar')
                                 <option value="seminar" selected="selected">Seminar </option>
                                 @else  
                                 <option value="seminar">Seminar </option>
                                 @endif 
-                               </select> --}}
-                                
-                            </div>
+                               </select>  
+                            </div> --}}
+
+                            
+                            
                             <div class="form-group col-md-6 float-left">
-                                <label class="form-label">Image<sup class="text-danger">*</sup></label><br/>
+                                <label class="form-label"> Course Image<sup class="text-danger">*</sup></label><br/>
                                 <img src="{{ asset('course/images/'.$course->image) }}" style="height: 120px; width: 120px"><br/>
                                 <div class="mt-1">
                                     <input type="file" name="image" class="form-control" >

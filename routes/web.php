@@ -136,7 +136,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Serviec Route
 Route::get('services', [ServiceController::class, 'index'])->name('services');
-Route::get('single-services/{id}', [ServiceController::class, 'singleService'])->name('singleService');
+Route::get('single-service/{id}', [ServiceController::class, 'singleService'])->name('singleService');
 
 // Freelancer Route
 Route::get('marketplace', [FreelancerController::class, 'index'])->name('marketplace');
