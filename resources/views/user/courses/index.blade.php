@@ -51,7 +51,13 @@
 
                                         
                                     <td>
-                                        <a href="" class="btn btn-info">View</a> 
+                                    @if(   $type =="service" ) 
+                                    <a href="{{url('single-services',$course->course->id)}}" class="btn btn-info">View</a> 
+                                     
+                                    @else   
+                                    <a href="{{url('single-training',$course->course->id)}}" class="btn btn-info">View</a> 
+                                      
+                                    @endif
                                         <!-- | <a href="{{ route('chats.index') }}" class="btn btn-success">Chat Now</a> -->
                                      </td>
                                 </tr>

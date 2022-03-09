@@ -18,15 +18,15 @@
                             <td>Batch Name</td>
                             <td>{{ $batch->batch_name }}</td>
                         </tr>
-                        <!-- <tr>
+                       {{-- <tr>
                             <td>Batch Price</td>
                             <td>{{ number_format($batch->price, '2') }}</td>
-                        </tr> -->
+                        </tr> 
                         <tr>
                             <td>Total Trainers</td>
                             <td>{{ $batch->trainers->count() }}</td>
                         </tr>
-                         
+                         --}}
                         <tr>
                             <td>Description</td>
                             <td>
@@ -48,7 +48,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
-                                <th>Action</th>
+                                <!-- <th>Action</th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -58,11 +58,11 @@
                                     <td>{{ ++$i }}</td>
                                     <td class="text-capitalize">{{$participator->participator->name }}</td>
                                     
-                                    <td>
+                                    <!-- <td>
                                         
                                             <a href="{{ route('perticipators.edit', $participator->participator->id) }}" class="btn btn-success text-light fas fa-eye"    >  </a>
                                        
-                                    </td>
+                                    </td> -->
                                 </tr>
                             @endforeach
                         </tbody>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\enroll;
 use App\Http\Requests\StoreenrollRequest;
 use App\Http\Requests\UpdateenrollRequest;
+use App\Models\cart;
 use App\Models\perticipator;
 use App\Models\seminarParticipators;
 use Illuminate\Http\Request;
@@ -19,7 +20,7 @@ class EnrollController extends Controller
      */
     public function index(Request $request)
     {
-        
+  
         
         $card = array();
 
@@ -59,7 +60,11 @@ class EnrollController extends Controller
             $enroll->save();
 
         }
-        return redirect(route('redirection'));
+    if($request->cart_id){
+        $cart = cart::find($request->cart_id);
+        $cart->delete();
+    }
+        return redirect(route('redirection'))->with('success', 'Successfully Added');;
         // return view('enroll', compact('card'));
 
 
@@ -89,6 +94,8 @@ class EnrollController extends Controller
      */
     public function store(Request $request)
     {
+        return $request;
+       
         // it is n't currently working 
         //    return Auth::user();
         $card = array();
@@ -104,6 +111,7 @@ class EnrollController extends Controller
         $enroll->is_due = 0;
      
         $participator= perticipator::where('user_id',Auth::user()->id)->first();
+        
         if(is_null($participator)){
             $participator= new perticipator;
             $participator->user_id = Auth::user()->id;
@@ -120,7 +128,7 @@ class EnrollController extends Controller
 
         // added him as participant 
         if ($enroll->seminar_id) {
-
+return $enroll->seminar_id;
             $seminarParticipators =  new seminarParticipators;
             $seminarParticipators->seminar_id =   $request->seminar_id;
             $seminarParticipators->participator_id = $enroll->participator_id;

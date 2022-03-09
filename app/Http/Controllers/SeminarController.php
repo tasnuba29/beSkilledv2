@@ -17,6 +17,7 @@ class SeminarController extends Controller
 
     public function singleSeminar($id){
         $seminar = seminar::find($id);
+      
         return view('singleSeminar',compact('seminar'));
     }
     
