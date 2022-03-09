@@ -83,13 +83,19 @@
               <img src="{{ asset('seminar/images/'.$cart->seminar->breadcrumb_image) }}" class="mr-3" alt="" width="150px">
               <div class="media-body">
                 <h5 class="mt-0">{{ $cart->seminar->title}}</h5>
-                <p class="small"> TK {{ $cart->seminar->price}}
+                <p class="small"> TK {{ $cart->seminar->price}}  
 
 
-                <form action="{{ url('/pay') }}" method="POST" class="needs-validation">
+                <form action="{{ route('users.enrolls.index') }}" method="get" class="needs-validation">
                   <input type="hidden" value="{{ csrf_token() }}" name="_token" />
 
                   <input type="hidden" value="{{ $cart->id}}" name="cart_id" />
+                 
+                  <input type="hidden" value="0" name="course_id" /> 
+                  <input type="hidden" value="0" name="price" /> 
+                  <input type="hidden" value="{{ $cart->seminar->id}} " name="seminar_id" /> 
+                  <input type="hidden" value="none" name="payment_method" />  
+                  <input type="hidden" value="none" name="payment_Comment" /> 
                  
                   <button type="submit" class=" btn appointment-btn scrollto  ">Pay now</button>
                   <a  class="btn appointment-btn scrollto btn-danger bg-danger" href="{{ route('carts.show',$cart->id)}}">   remove </a>
